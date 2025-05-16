@@ -1,0 +1,44 @@
+@using MyBlog.DBModels;
+@using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+@using Microsoft.EntityFrameworkCore;
+@using Microsoft.AspNetCore.Identity;
+
+@inject UserManager<MyUser> userManager;
+@model LogForm;
+
+@section css{
+<link rel="stylesheet" href="~/css/ManageUsers.css"></link>
+}
+
+
+<table class="tb">
+    <tr><th>使用者</th><th>階級</th><th>刪除</th></tr>
+    @foreach(var e in await userManager.Users.ToListAsync()){
+        
+        var li=await userManager.GetRolesAsync(e);
+        <tr>
+        <td>@e.UserName</td>
+        <td>@string.Join(",",li.ToArray())</td>
+        @if(!await userManager.IsInRoleAsync(e,"Admin")){
+            <td>
+            <form asp-action="UserDelete">
+            <input type="hidden" asp-for="@e.Id" name="userId">
+            @Html.AntiForgeryToken()
+             <input type="submit" value="刪除">
+            </form> 
+            </td>
+        }
+        else{
+            <td>X</td>
+        }
+        </tr>
+    }
+    <div>
+    <form asp-action="UserCreate" >
+        <input type="text" value="" placeholder="使用者名稱" asp-for="@Model.Name">
+        <input type="text" value="" placeholder="密碼" asp-for="@Model.Password">
+        <input type="submit" value="新增">
+    </form>
+    </div>
+    
+</table>

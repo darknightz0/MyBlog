@@ -1,0 +1,48 @@
+@using MyBlog.Models
+@using MyBlog.DBModels;
+@using Microsoft.AspNetCore.Identity;
+@model Product;
+@inject UserManager<MyUser> UserManager;
+@inject UserDbContext DB;
+@section css{
+<link rel="stylesheet" href="~/css/Manage.css"></link>
+}
+<form asp-action="ProductCreate" enctype="multipart/form-data">
+    <input type="text" asp-for="@Model.name">
+    <input type="number" asp-for="@Model.number">
+    <input type="number" asp-for="@Model.price">
+    <input type="file" asp-for="@Model.formFile">
+    <input type="submit">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="@Model.UserId">
+    <input type="hidden" asp-for="@Model.Id">
+</form>
+<table class="tb">
+    <tr>
+        @foreach(var e in Product.columesName){
+        <th>@e</th>
+        }
+        <th>持有者</th>
+        <th>刪除</th>
+    </tr>
+
+    
+    @foreach(var e in DB.Product.Select(e=>new{e.Id,e.name,e.number,e.price,e.path,e.User}).ToList()){
+        <tr>
+            <td>@e.Id</td>
+            <td>@e.name</td>
+            <td>@e.number</td>
+            <td>@e.price</td>
+            <td><img src="@e.path"></td>
+            <td>@e.User.UserName</td>
+            <td>
+            <form asp-action="ProductDelete">
+            <input type="hidden" asp-for="@e.Id" name="pId">
+            @Html.AntiForgeryToken()
+             <input type="submit" value="刪除">
+            </form> 
+            </td>
+        </tr>
+    }  
+     
+</table>   

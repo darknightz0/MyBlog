@@ -1,0 +1,14 @@
+@section css{
+    <link rel="stylesheet" href="~/css/MyMatlab.css" asp-append-version="true">
+}
+<h1>海洋表面流速浮標模擬</h1>
+<video src="~/MySource/sea_speed.mp4" controls></video>
+<h1>流線切面</h1>
+<img src="~/MyImage/streamline.png">
+<h1>用Matlab App Designer 製作使用者介面(需在matlab runtime環境下執行)</h1>
+<h2>颱風路徑查詢</h2>
+<a asp-action="DownloadTyphoonPath" class="img"><img src="~/MyImage/typhoon_2.JPG"></a>
+<h2>颱風路徑區域查詢</h2>
+<a asp-action="DownloadTyphoonArea" class="img"><img src="~/MyImage/typhoon.JPG"></a>
+<h2>長短波在邊界盒模擬</h2>
+<a asp-action="DownloadWave" class="img"><img src="~/MyImage/wave.JPG"></a>

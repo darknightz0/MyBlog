@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/gsap": "^1.20.2"
+  },
+  "dependencies": {
+    "gsap": "^3.12.7",
+    "plotly.js-dist-min": "^3.0.1"
+  }
+}

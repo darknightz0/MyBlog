@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using MyBlog.DBModels;
+@inject SignInManager<MyUser> SignInManager;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyBlog</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/MyUI.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyBlog.styles.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("css",false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyBlog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navR">
+                        @{bool bt=SignInManager.IsSignedIn(User)&&User.IsInRole("Admin");} 
+                        @if(bt){
+                            <li class="nav-item">
+                            <a class="nav-link alinks" asp-area="" asp-controller="Manage" asp-action="Users"></a>
+                            <a class="nav-link alinks" asp-area="" asp-controller="Manage" asp-action="Product"></a>
+                            </li>
+                            
+                        }
+                        <li class="nav-item">
+                            @if(SignInManager.IsSignedIn(User)){
+                                <a class="nav-link" asp-area="" asp-controller="Log" asp-action="LogOut">登出</a>
+                            }
+                            else{
+                                
+                                <a class="nav-link" asp-area="" asp-controller="Log" asp-action="LogPage">登入</a>
+                            }
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        
+            @RenderBody()
+       
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - MyInfo - 歐陽德軒
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/node_modules/gsap/dist/gsap.min.js"></script>
+    <script src="~/js/node_modules/plotly.js-dist-min/plotly.min.js" charset="utf-8"></script>
+    <script src="~/js/MyUI.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("js", required: false)
+</body>
+</html>

@@ -1,0 +1,24 @@
+.I{
+    position: absolute;
+    right: 0;
+    top: 10%;
+    max-width: 20%;
+    border-radius: 2px;
+   filter: brightness(0.95);
+
+}
+.ShineBox.contain.MyNameContain{
+    position: absolute;
+    top: 10%;
+    left:25%;
+    width: 30%;
+}
+.MyName{
+    font-size: 40px;
+    color: goldenrod;
+}
+.list{
+    position: absolute;
+    top: 35%;
+    font-size: larger;
+}

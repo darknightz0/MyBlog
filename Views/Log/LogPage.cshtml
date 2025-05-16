@@ -1,0 +1,15 @@
+@using MyBlog.DBModels;
+@model LogForm;
+@section css{
+    <link rel="stylesheet" href="~/css/MyMVC.css">
+}
+<form asp-action="LogIn">
+<label>@LogForm.name[0]
+<input type="text" asp-for="@Model.Name">
+</label>
+<label>@LogForm.name[1]
+<input type="text" asp-for="@Model.Password">
+</label>
+<input type="submit">
+@Html.AntiForgeryToken()
+</form> 

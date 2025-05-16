@@ -1,0 +1,561 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\obj\\Debug\\net8.0\\win-x64\\scopedcss\\projectbundle\\MyBlog.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MyBlog.b7gpt17w6k.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\class.css",
+      "PackagePath": "staticwebassets\\MyGame\\class.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\class.js",
+      "PackagePath": "staticwebassets\\MyGame\\class.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\jsonJs.js",
+      "PackagePath": "staticwebassets\\MyGame\\jsonJs.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\main.html",
+      "PackagePath": "staticwebassets\\MyGame\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\package-lock.json",
+      "PackagePath": "staticwebassets\\MyGame\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\package.json",
+      "PackagePath": "staticwebassets\\MyGame\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\path.js",
+      "PackagePath": "staticwebassets\\MyGame\\path.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\effect\\default.wav",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\effect\\default.wav"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\arrow-left.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\arrow-left.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\arrow-right.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\arrow-right.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\arrow_icon.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\arrow_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\bread.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\bread.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\clover.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\clover.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\default.jpg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\setting.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\setting.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\人與靈的裂痕.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\人與靈的裂痕.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\告別.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\告別.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\回去.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\回去.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\守護者.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\守護者.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\封印.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\封印.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\封印聖壇.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\封印聖壇.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\封面.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\封面.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\小路.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\小路.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\平凡.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\平凡.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\幻化.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\幻化.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\幽影之潭.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\幽影之潭.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\序章.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\序章.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\微弱.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\微弱.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\有朝一日.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\有朝一日.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\村莊.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\村莊.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\村長.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\村長.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\森林中心.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\森林中心.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\焦土.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\焦土.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\石板.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\石板.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\繁星.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\繁星.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\記錄.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\記錄.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\農田.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\農田.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\迷霧森林.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\迷霧森林.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\重生.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\重生.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\靈動碎片.png",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\靈動碎片.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\麵包坊.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\麵包坊.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\image\\黑光迷宮.jpeg",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\image\\黑光迷宮.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\bgm.mp3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\bgm.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\失敗.mp3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\失敗.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\完美.MP3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\完美.MP3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\普通.mp3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\普通.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\村莊.mp3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\村莊.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\森林.mp3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\森林.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\resource\\music\\聖壇.mp3",
+      "PackagePath": "staticwebassets\\MyGame\\resource\\music\\聖壇.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\script.js",
+      "PackagePath": "staticwebassets\\MyGame\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyGame\\style.css",
+      "PackagePath": "staticwebassets\\MyGame\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\Iicon.jpg",
+      "PackagePath": "staticwebassets\\MyImage\\Iicon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\bg.jpg",
+      "PackagePath": "staticwebassets\\MyImage\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\streamline.png",
+      "PackagePath": "staticwebassets\\MyImage\\streamline.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\typhoon.JPG",
+      "PackagePath": "staticwebassets\\MyImage\\typhoon.JPG"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\typhoon_2.JPG",
+      "PackagePath": "staticwebassets\\MyImage\\typhoon_2.JPG"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\wave.JPG",
+      "PackagePath": "staticwebassets\\MyImage\\wave.JPG"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MySource\\MyGL.zip",
+      "PackagePath": "staticwebassets\\MySource\\MyGL.zip"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MySource\\sea_speed.mp4",
+      "PackagePath": "staticwebassets\\MySource\\sea_speed.mp4"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MySource\\typhoon_area.zip",
+      "PackagePath": "staticwebassets\\MySource\\typhoon_area.zip"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MySource\\typhoon_path.zip",
+      "PackagePath": "staticwebassets\\MySource\\typhoon_path.zip"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MySource\\wave.zip",
+      "PackagePath": "staticwebassets\\MySource\\wave.zip"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg",
+      "PackagePath": "staticwebassets\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\Manage.css",
+      "PackagePath": "staticwebassets\\css\\Manage.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\ManageUsers.css",
+      "PackagePath": "staticwebassets\\css\\ManageUsers.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\MyMVC.css",
+      "PackagePath": "staticwebassets\\css\\MyMVC.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\MyMatlab.css",
+      "PackagePath": "staticwebassets\\css\\MyMatlab.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\MyUI.css",
+      "PackagePath": "staticwebassets\\css\\MyUI.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\MyUI.js",
+      "PackagePath": "staticwebassets\\js\\MyUI.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\package-lock.json",
+      "PackagePath": "staticwebassets\\js\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\package.json",
+      "PackagePath": "staticwebassets\\js\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x64\\staticwebassets\\msbuild.MyBlog.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x64\\staticwebassets\\msbuild.MyBlog.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x64\\staticwebassets\\msbuild.build.MyBlog.props",
+      "PackagePath": "build\\MyBlog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x64\\staticwebassets\\msbuild.buildMultiTargeting.MyBlog.props",
+      "PackagePath": "buildMultiTargeting\\MyBlog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x64\\staticwebassets\\msbuild.buildTransitive.MyBlog.props",
+      "PackagePath": "buildTransitive\\MyBlog.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
