@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    
+     <Content Include="DataBase\User.db"></Content>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,8 +16,9 @@
   </ItemGroup>
 
 </Project>
-<!--<OutputType>Exe</OutputType>
-<PublishSingleFile>true</PublishSingleFile>
-    <SelfContained>true</SelfContained><
-    RuntimeIdentifier>win-x64</RuntimeIdentifier> 
-    -->
+<!--
+  <OutputType>Exe</OutputType>
+  <PublishSingleFile>true</PublishSingleFile>
+  <SelfContained>true</SelfContained>
+  <RuntimeIdentifier>win-x64</RuntimeIdentifier> 
+-->
