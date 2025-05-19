@@ -19,6 +19,7 @@ RUN dotnet publish "MyBlog.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+COPY ./DataBase /app/DataBase
 # 🐞 新增這行來查看檔案有沒有被複製成功
 RUN ls -al /app
 ENTRYPOINT ["dotnet", "MyBlog.dll"]
