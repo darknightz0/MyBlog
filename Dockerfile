@@ -21,4 +21,4 @@ WORKDIR /app
 COPY --from=build /app/publish .
 # 🐞 新增這行來查看檔案有沒有被複製成功
 RUN ls -al /app
-ENTRYPOINT ["./MyBlog.exe"]
+ENTRYPOINT ["dotnet", "MyBlog.dll"]
