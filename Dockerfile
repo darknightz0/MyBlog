@@ -20,6 +20,8 @@ FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 COPY ./DataBase /app/DataBase
+COPY ./wwwroot/js/node_modules /app/wwwroot/js/node_modules
+#任何其他靜態資源都要被添加
 # 🐞 新增這行來查看檔案有沒有被複製成功
 RUN ls -al /app
 ENTRYPOINT ["dotnet", "MyBlog.dll"]
