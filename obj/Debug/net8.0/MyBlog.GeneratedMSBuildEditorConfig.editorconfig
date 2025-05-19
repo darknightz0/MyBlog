@@ -24,8 +24,32 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Home/MyMatlab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNeU1hdGxhYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Home/MyMVC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNeU1WQy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Log/LogPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXExvZ1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Log/Start.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXFN0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Manage/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Manage/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlXFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/72022/Desktop/網頁設計/asp/MyBlog/Views/Shared/Error.cshtml]
