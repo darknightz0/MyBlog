@@ -32,11 +32,12 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav navR">
-                        @{bool bt=SignInManager.IsSignedIn(User)&&User.IsInRole("Admin");} 
+                        @{bool bt=SignInManager.IsSignedIn(User)&&User.IsInRole("Manager");} 
                         @if(bt){
                             <li class="nav-item">
                             <a class="nav-link alinks" asp-area="" asp-controller="Manage" asp-action="Users"></a>
                             <a class="nav-link alinks" asp-area="" asp-controller="Manage" asp-action="Product"></a>
+                            <a class="nav-link alinks" asp-area="" asp-controller="Manage" asp-action="Log"></a>
                             </li>
                             
                         }
@@ -62,7 +63,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - MyInfo - 歐陽德軒
+            &copy; 2025 - 製作 - 歐陽德軒 本網站時間為臺灣GMT+8時間
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

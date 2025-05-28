@@ -217,9 +217,35 @@ namespace MyBlog.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("MyBlog.Models.MyLog", b =>
+                {
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Time");
+
+                    b.ToTable("Log");
+                });
+
             modelBuilder.Entity("MyBlog.Models.Product", b =>
                 {
                     b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreateDateTime_TW")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
@@ -245,6 +271,32 @@ namespace MyBlog.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("MyBlog.Models.UserProduct", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("LastModify")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserProduct");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -305,6 +357,25 @@ namespace MyBlog.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("MyBlog.Models.UserProduct", b =>
+                {
+                    b.HasOne("MyBlog.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyBlog.DBModels.MyUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });

@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using MyBlog.DBModels;
@@ -21,10 +21,20 @@ public class Product{
     [Range(0,int.MaxValue)]
     public int price{get;set;}
     public string path{get;set;}=string.Empty;
-    public DateTime createDateTime;
+    public DateTime CreateDateTime_TW{get;set;}=DateTime.UtcNow.AddHours(8);
     public string UserId{get;set;}=string.Empty;
     public MyUser? User{get;set;}
-    [NotMapped]
-    public static string[] columesName{get;set;}=["編號","名稱","數量","價錢","圖片"];
-    
+}
+public class UserProduct{
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public string? Id{get;set;}
+    [ForeignKey("User")]
+    public string UserId{get;set;}
+    [ForeignKey("Product")]
+    public string ProductId{get;set;}
+    public MyUser User{get;set;}
+    public Product Product{get;set;}
+
+    public DateTime LastModify{get;set;}=DateTime.UtcNow.AddHours(8);
 }

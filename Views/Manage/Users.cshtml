@@ -12,7 +12,11 @@
 
 
 <table class="tb">
-    <tr><th>使用者</th><th>階級</th><th>刪除</th></tr>
+    <tr>
+        @foreach(var e in FormColumeName.User.Content()){
+        <th>@e</th>
+        }
+    </tr>
     @foreach(var e in await userManager.Users.ToListAsync()){
         
         var li=await userManager.GetRolesAsync(e);
@@ -37,7 +41,10 @@
     <form asp-action="UserCreate" >
         <input type="text" value="" placeholder="使用者名稱" asp-for="@Model.Name">
         <input type="text" value="" placeholder="密碼" asp-for="@Model.Password">
+        <select asp-for="@Model.Role" asp-items="@Model.select"></select>
+
         <input type="submit" value="新增">
+        @Html.AntiForgeryToken()
     </form>
     </div>
     

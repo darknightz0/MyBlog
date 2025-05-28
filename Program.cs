@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MyBlog.DBModels;
+using MyBlog.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IFileService,FileService>();
 builder.Services.AddDbContext<UserDbContext>(
     op=>op.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );

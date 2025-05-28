@@ -5,7 +5,7 @@
 onload=()=>{
     var child=document.getElementsByClassName("alinks");
     var dp=new DropList();
-    dp.addAnchorOptions(child,["使用者","商品"],"管理");
+    dp.addAnchorOptions(child,["使用者","商品","日誌"],"管理");
     
 }
 new MoveBackground("/MyImage/bg.jpg");

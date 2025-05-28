@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyBlog.DBModels;
 using MyBlog.Models;
+using MyBlog.Services;
 
 namespace MyBlog.Controllers;
 
@@ -15,12 +17,14 @@ public class ManageController : Controller
 {
     private readonly UserManager<MyUser>_userManager;
     private readonly UserDbContext _userDbContext;
+    private readonly IFileService _fileService;
     private MyUser? user;
-    public  ManageController(UserManager<MyUser> userManager,UserDbContext userDbContext
+    public  ManageController(UserManager<MyUser> userManager,UserDbContext userDbContext,IFileService fileService
     ){
         //UserDBContext
        _userManager=userManager;
         _userDbContext= userDbContext;
+        _fileService=fileService;
     }
     public override async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
@@ -30,31 +34,53 @@ public class ManageController : Controller
     
 
     [Authorize(Roles ="Admin")]
-    public IActionResult Users(){
-        return View(new LogForm());
+    public async Task<IActionResult> Users(){
+        var f=new LogForm();
+        f.select=new List<SelectListItem>();
+        var str=await _userDbContext.Roles.Select(e=>new{e.Name,e.Description}).Where(e=>e.Name!="Admin").ToListAsync();
+        str.ForEach(e=>{
+            f.select.Add(new SelectListItem(){Text=e.Description,Value=e.Name});
+        });
+        
+        return View(f);
     }
     [Authorize(Roles ="Admin")]
     [HttpPost]
     [RequireAntiforgeryToken]
     public async Task<IActionResult> UserDelete(string userId){
-        var user =await _userManager.FindByIdAsync(userId);
-        Console.WriteLine("刪除"+user!.UserName+"開始");
-        await _userManager.DeleteAsync(user);
+        var nuser =await _userManager.FindByIdAsync(userId);
+        await user.AddLogAsync(LogTitle.DUser,nuser);
+        await _userManager.DeleteAsync(nuser!);
+        Directory.Delete("".GetUserWwwPath(nuser),true);
         return RedirectToAction("Users"); 
     }
     [Authorize(Roles ="Admin")]
     [HttpPost]
+    [RequireAntiforgeryToken]
     public async Task<IActionResult> UserCreate(LogForm info){
         if(await _userManager.FindByNameAsync(info.Name)==null){
-            Console.WriteLine("新增"+info.Name+"開始");
-            var user=new MyUser
+            
+            var nuser=new MyUser
             {
                 UserName = info.Name,
-                DisplayName = "使用者",
+                DisplayName = "使用者"+DateTime.Now.ToString("-yyyy-MM-dd"),
                 EmailConfirmed = true
             };
-            await _userManager.CreateAsync(user,info.Password);
-            await _userManager.AddToRoleAsync(user,"User");
+            await _userManager.CreateAsync(nuser,info.Password);
+            await user.AddLogAsync(LogTitle.CUser,nuser);
+            switch (info.Role)
+            {
+                case "Manager":
+                    await _userManager.AddToRoleAsync(nuser,"Manager");
+                    await _userManager.AddToRoleAsync(nuser,"User");
+                    break;
+                case "User":
+                    await _userManager.AddToRoleAsync(nuser,"User");
+                    break;    
+                default:
+                break;
+            }
+            Directory.CreateDirectory("".GetUserWwwPath(nuser));
         }
         else
         Console.WriteLine("重複新增"+info.Name);
@@ -62,40 +88,37 @@ public class ManageController : Controller
     }
     //Prodct
     
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles ="Manager")]
     public IActionResult Product(){
         var p=new Product();
         p.UserId=user!.Id;
         
         return View(p);
     }
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles ="Manager")]
     [HttpPost]
     [RequireAntiforgeryToken]
-    public async Task<IActionResult> ProductCreate(Product product){
+    public async Task<IActionResult> ProductCreate([FromForm]Product product){
        
-        var filetype = new List<string> { ".png", ".jpg", ".jpeg" };
+        
         
         Console.WriteLine("!!!!!"+product.formFile.FileName);
-        string? type=Path.GetExtension(product.formFile.FileName).ToLower();
-        if(filetype.Contains(type)){
+        string? type=product.formFile.FileName.GetExtension();
+        if(_fileService.IsFileType(product.formFile,FileMines.Image)){
 
             if (await _userDbContext.Product.Where(e=>e.UserId==user!.Id&&e.name==product.name).FirstOrDefaultAsync()==null){
-                product.createDateTime=DateTime.Now;
-                product.path=Myfun.Combine("/UserAsset",user!.Id,product.name+type);
-                var path=Myfun.Combine(Myfun.GetCurrentDirectory(),"wwwroot","UserAsset",user!.Id);
-                Directory.CreateDirectory(path);
                 
-                path=Myfun.Combine(path,product.name+type);
+                product.path="".Combine("/UserAsset",user!.Id,product.name+type);
+                
                 Console.WriteLine( "錯誤"+ModelState.ErrorCount);
                 foreach(var i in ModelState.Values.SelectMany(v => v.Errors))
                     Console.WriteLine( "!!!錯誤 "+i.ErrorMessage);
             if(true){
                 
             Console.WriteLine("有效的檔案格式");
-            using(var filestream=new FileStream(path,FileMode.Create)){
-                await product.formFile.CopyToAsync(filestream);
-            }
+            
+            await _fileService.Upload(product.formFile,"".Combine("".GetUserWwwPath(user),product.name+type));
+            await user.AddLogAsync(LogTitle.CProdut,product);
             await _userDbContext.Product.AddAsync(product);
             await _userDbContext.SaveChangesAsync();
             }
@@ -109,18 +132,19 @@ public class ManageController : Controller
             Console.WriteLine("無效的檔案格式 "+type??" 空的");
         return RedirectToAction("Product");
     }
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles ="Manager")]
     [HttpPost]
     [RequireAntiforgeryToken]
     public async Task<IActionResult> ProductDelete(string pId){
         var p=_userDbContext.Product.Single(e=>e.Id==pId);
-        var path=Myfun.currentPath(p.path);//!!!!!!!!!!!! /path
-        if(System.IO.File.Exists(path)){
-            System.IO.File.Delete(path);
-            Console.WriteLine("刪檔成功");
-        }
+        await user.AddLogAsync(LogTitle.DProdut,p);
+        _fileService.DeletUserData(p.path.Abs2Rel());
         _userDbContext.Product.Remove(p);
         await _userDbContext.SaveChangesAsync();
         return RedirectToAction("Product"); 
+    }
+    [Authorize(Roles ="Admin")]
+    public async Task<IActionResult> Log(){
+        return View(await _userDbContext.Log.ToArrayAsync()); 
     }
 }

@@ -19,11 +19,9 @@
 </form>
 <table class="tb">
     <tr>
-        @foreach(var e in Product.columesName){
+        @foreach(var e in FormColumeName.Product.Content()){
         <th>@e</th>
         }
-        <th>持有者</th>
-        <th>刪除</th>
     </tr>
 
     

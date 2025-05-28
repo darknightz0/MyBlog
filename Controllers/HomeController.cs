@@ -1,17 +1,19 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MyBlog.Models;
+using MyBlog.Services;
 
 namespace MyBlog.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private readonly IFileService _fileService;
+    public HomeController(ILogger<HomeController> logger,IFileService fileService)
     {
        
         _logger = logger;
+        _fileService=fileService;
     }
 
     public IActionResult Index()
@@ -21,7 +23,7 @@ public class HomeController : Controller
     }
     public IActionResult MyGame()
     {
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","MyGame","main.html"),"text/html");
+        return _fileService.DownloadFromWwwroot("".Combine("MyGame","main.html"));
     }
     public IActionResult MyMatlab()
     {
@@ -33,16 +35,16 @@ public class HomeController : Controller
     }
     public IActionResult MyGL()
     {
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","MySource","MyGL.zip"),"application/zip","MyGL.zip");
+        return _fileService.DownloadFromWwwroot("".Combine("MySource","MyGL.zip"),"MyGL.zip");
     }
     public IActionResult DownloadWave(){
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","MySource","wave.zip"),"application/zip","wave.zip");
+        return _fileService.DownloadFromWwwroot("".Combine("MySource","wave.zip"),"wave.zip");
     }
     public IActionResult DownloadTyphoonPath(){
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","MySource","typhoon_path.zip"),"application/zip","typhoon_path.zip");
+         return _fileService.DownloadFromWwwroot("".Combine("MySource","typhoon_path.zip"),"typhoon_path.zip");
     }
     public IActionResult DownloadTyphoonArea(){
-        return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","MySource","typhoon_area.zip"),"application/zip","typhoon_area.zip");
+        return _fileService.DownloadFromWwwroot("".Combine("MySource","typhoon_area.zip"),"typhoon_area.zip");
     }
     public IActionResult Privacy()
     {

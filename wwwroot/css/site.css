@@ -30,3 +30,11 @@ body {
   width:fit-content;
   display: flex;
 }
+
+
+
+.tb{
+    position: relative;
+    text-align: center;
+    border-radius: 2px;
+}

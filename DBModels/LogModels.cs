@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyBlog.Models;
 
@@ -13,9 +14,11 @@ public class UserDbContext: IdentityDbContext<MyUser,MyRole, string>
         : base(options)
     {
        //Database.EnsureCreated();
-       
+       LogExtension.db=this;
     }
     public DbSet<Product> Product{get;set;}
+    public DbSet<UserProduct> UserProduct{get;set;}
+    public DbSet<MyLog> Log{get;set;}
     // 也可以自行加 DbSet<YourModel>
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -40,18 +43,25 @@ public sealed class Myinit{
         var userManager = services.GetRequiredService<UserManager<MyUser>>();
         // 建立角色
      
-        var roles = new[] { "Admin", "User" };
+        var roles = new[] { "Admin", "Manager","User" };
+        string[] Description=["系統管理員","管理者","使用者"];
+        int i=0;
         foreach (var role in roles)
         {
 
             if (!await roleManager.RoleExistsAsync(role))
             {
-                var result = await roleManager.CreateAsync(new MyRole { Name = role, Description = $"Default {role} role" });
-if (!result.Succeeded)
-{
-    Console.WriteLine($"建立角色失敗: {string.Join(", ", result.Errors.Select(e => e.Description))}");
-}
+                var result = await roleManager.CreateAsync(new MyRole { Name = role, Description = Description[i++] });
+        if (!result.Succeeded)
+        {
+            Console.WriteLine($"建立角色失敗: {string.Join(", ", result.Errors.Select(e => e.Description))}");
+        }
             }
+            /*
+            var c=await roleManager.FindByNameAsync(role);
+            c.Description=Description[i++];
+            roleManager.UpdateAsync(c);
+            */
         }
         
          // 建立管理員帳號
@@ -73,10 +83,14 @@ if (!result.Succeeded)
     Console.WriteLine($"建立管理員失敗: {string.Join(", ", result.Errors.Select(e => e.Description))}");
 }
             await userManager.AddToRoleAsync(adminUser, "Admin");
+            
         }
         var uu=await userManager.FindByNameAsync("admin");
-        if(await userManager.IsInRoleAsync(uu,"User"))
-        await userManager.AddToRoleAsync(uu, "User");
+        foreach(var e in roles){
+            if(!await userManager.IsInRoleAsync(uu,e))
+                await userManager.AddToRoleAsync(uu, e);
+        }
+        
     }
 } 
 // Models/ApplicationUser.cs
@@ -98,6 +112,10 @@ public class LogForm{
     [Required]
     [DataType(DataType.Password)]
     public string Password{get;set;}=string.Empty;
+    [Required]
+    [NotMapped]
+    public string Role{get;set;}=string.Empty;
+    public List<SelectListItem>?select;
     [NotMapped]
     public static readonly string[] name=["帳號","密碼"];
     [NotMapped]

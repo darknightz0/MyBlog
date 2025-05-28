@@ -1,0 +1,23 @@
+@model MyLog[];
+@section css{
+<link rel="stylesheet" href="~/css/ManageLog.css"></link>
+}
+<table class="tb">
+    <tr>
+    @{var txt=FormColumeName.Log.Content();
+        var s=FormColumeName.Log.ColumeWidth();
+    }
+    @for(var i=0;i<txt.Length;i++ ){
+        
+        <th style="width:@s[i]">@txt[i]</th>
+    }
+    </tr>
+    @foreach(var i in Model){
+        <tr>
+            <td>@i.Time</td>
+            <td>@i.UserId</td>
+            <td>@i.Title</td>
+            <td>@i.Content</td>
+        </tr>
+    }
+</table>
