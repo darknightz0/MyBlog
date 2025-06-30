@@ -2853,11 +2853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\MyBlog.csproj",
+      "projectUniqueName": "c:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\MyBlog.csproj",
       "projectName": "MyBlog",
-      "projectPath": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\MyBlog.csproj",
+      "projectPath": "c:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\MyBlog.csproj",
       "packagesPath": "C:\\Users\\72022\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\obj\\",
+      "outputPath": "c:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\72022\\AppData\\Roaming\\NuGet\\NuGet.Config",

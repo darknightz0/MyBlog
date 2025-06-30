@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyBlog.Models;
+using MyBlog.StaticData;
 
 namespace MyBlog.DBModels;
 
@@ -17,7 +18,10 @@ public class UserDbContext: IdentityDbContext<MyUser,MyRole, string>
        LogExtension.db=this;
     }
     public DbSet<Product> Product{get;set;}
-    public DbSet<UserProduct> UserProduct{get;set;}
+    public DbSet<Cart> Cart{get;set;}
+    public DbSet<Rating> Rating{get;set;}
+    public DbSet<Order> Order{get;set;}
+    public DbSet<Transaction> Transaction{get;set;}
     public DbSet<MyLog> Log{get;set;}
     // 也可以自行加 DbSet<YourModel>
     protected override void OnModelCreating(ModelBuilder builder)
@@ -41,8 +45,9 @@ public sealed class Myinit{
 
         var roleManager = services.GetRequiredService<RoleManager<MyRole>>();
         var userManager = services.GetRequiredService<UserManager<MyUser>>();
-        // 建立角色
-     
+        var _db = services.GetRequiredService<UserDbContext>();
+        // 建立角色 
+       
         var roles = new[] { "Admin", "Manager","User" };
         string[] Description=["系統管理員","管理者","使用者"];
         int i=0;
@@ -90,13 +95,21 @@ if (!result.Succeeded)
             if(!await userManager.IsInRoleAsync(uu,e))
                 await userManager.AddToRoleAsync(uu, e);
         }
-        
+        //
+        _db.Cart.RemoveRange(await _db.Cart.ToArrayAsync());
+        await _db.SaveChangesAsync();
+        StaticProductInfo.Number=_db.Product.Count();
+       
     }
 } 
 // Models/ApplicationUser.cs
 public class MyUser : IdentityUser
 {
     public string DisplayName { get; set; }=string.Empty;
+    public string Icon { get; set; }="/MyImage/icon.jpg";
+    public DateTime? Birthday { get; set; }
+    public string Introduction { get; set; }=string.Empty;
+    public string Gender { get; set; }="未知";
     public ICollection<Product> Products{ get; set; }
    
 }

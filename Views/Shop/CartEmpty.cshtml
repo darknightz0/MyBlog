@@ -1,0 +1,21 @@
+@using MyBlog.DBModels;
+您的購物車是空的
+<script>
+    function log(){
+        window.location.href="/Log/LogPage";
+    }
+    function shop(){
+        window.location.href="/shop/shop";
+    }
+</script>
+@if(ViewData["user"] as MyUser==null){
+    <div class="ItemBlock car type1" onclick="log()">
+    登入您的帳戶
+    </div>    
+}
+else{
+    <div class="ItemBlock car type1" onclick="shop()">
+    去逛逛
+    </div>
+}
+

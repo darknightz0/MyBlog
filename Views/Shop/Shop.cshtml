@@ -1,0 +1,14 @@
+@using MyBlog.Models;
+@using System.Text.Json
+@using MyBlog.StaticData
+@model Product[];
+@section js{
+    <script src="~/js/Shop.js" asp-append-version="true"></script>
+}
+<script>
+    var product=@Html.Raw(JsonSerializer.Serialize(Model))
+    var Page=@ViewData["Page"]
+    var DisplayPage=@StaticProductInfo.DisplayPage;
+    var n=@StaticProductInfo.Number;
+</script>
+

@@ -217,6 +217,10 @@
       "PackagePath": "staticwebassets\\MyImage\\bg.jpg"
     },
     {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\icon.jpg",
+      "PackagePath": "staticwebassets\\MyImage\\icon.jpg"
+    },
+    {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\streamline.png",
       "PackagePath": "staticwebassets\\MyImage\\streamline.png"
     },
@@ -253,12 +257,20 @@
       "PackagePath": "staticwebassets\\MySource\\wave.zip"
     },
     {
-      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg",
-      "PackagePath": "staticwebassets\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg"
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\Icon.jpeg",
+      "PackagePath": "staticwebassets\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\Icon.jpeg"
     },
     {
-      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\d5713243-156d-43c7-bc98-970df6b039e3\\麵包.png",
-      "PackagePath": "staticwebassets\\UserAsset\\d5713243-156d-43c7-bc98-970df6b039e3\\麵包.png"
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\風景畫.jpg",
+      "PackagePath": "staticwebassets\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\風景畫.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\鯨魚提袋.jpg",
+      "PackagePath": "staticwebassets\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\鯨魚提袋.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\麵包2.png",
+      "PackagePath": "staticwebassets\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\麵包2.png"
     },
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\Index.css",
@@ -301,8 +313,28 @@
       "PackagePath": "staticwebassets\\js\\Index.js"
     },
     {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ManageProduct.js",
+      "PackagePath": "staticwebassets\\js\\ManageProduct.js"
+    },
+    {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\MyUI.js",
       "PackagePath": "staticwebassets\\js\\MyUI.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\Shop.js",
+      "PackagePath": "staticwebassets\\js\\Shop.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopCart.js",
+      "PackagePath": "staticwebassets\\js\\ShopCart.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopProduct.js",
+      "PackagePath": "staticwebassets\\js\\ShopProduct.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\UserInfo.js",
+      "PackagePath": "staticwebassets\\js\\UserInfo.js"
     },
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\package-lock.json",

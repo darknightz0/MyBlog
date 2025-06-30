@@ -1,0 +1,7 @@
+@model UserDto;
+<form asp-action="Revise">
+    @Html.AntiForgeryToken()
+    設定生日
+    <input type="date" asp-for="@Model.Birthday">
+    <input type="submit" value="更改">
+</form>

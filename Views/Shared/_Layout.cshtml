@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using MyBlog.DBModels;
 @inject SignInManager<MyUser> SignInManager;
-
+@inject UserManager<MyUser> _UserManager;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +32,12 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav navR">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Shop" asp-action="Cart">購物車</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Shop" asp-action="Shop" asp-route-Id="1">Shop</a>
+                        </li>
                         @{bool bt=SignInManager.IsSignedIn(User)&&User.IsInRole("Manager");} 
                         @if(bt){
                             <li class="nav-item">
@@ -43,7 +49,11 @@
                         }
                         <li class="nav-item">
                             @if(SignInManager.IsSignedIn(User)){
-                                <a class="nav-link" asp-area="" asp-controller="Log" asp-action="LogOut">登出</a>
+                                var data=await _UserManager.GetUserAsync(User);
+                                <script>
+                                    var data=@Html.Raw(Json.Serialize(new {data.Email,data.DisplayName,data.Icon}))
+                                </script>
+                                <a class="nav-link" asp-area="" asp-controller="Log" asp-action="LogOut" id="logoutbt"></a>
                             }
                             else{
                                 
@@ -56,7 +66,7 @@
         </nav>
     </header>
     <div class="main">
-        
+
             @RenderBody()
        
     </div>

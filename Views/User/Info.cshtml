@@ -1,0 +1,14 @@
+@using MyBlog.DBModels;
+@using System.Text.Json;
+@model MyUser;
+
+@section js{
+    <script src="~/js/UserInfo.js" asp-append-version="true"></script>
+}
+<script>
+    var title=["個人資料相片","名稱","生日","性別"];
+    var link=["/User/Icon","/User/Name","/User/Birthday","/User/Gender"]
+    var user =@Html.Raw(JsonSerializer.Serialize(new {data=new object[]{Model.Icon,Model.DisplayName,Model.Birthday?.ToString("yyyy年MM月dd日"),Model.Gender}}));
+</script>
+<div id="main"></div>
+

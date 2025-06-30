@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bdsbO61uN6R+Uih/JfyGP3YXBMLHeR9/p58g+CqWoq8=",
+  "Hash": "Yd+kvOp4jfobO9o760V3Mo7GCtpPZ25GcV3c9NFP4Gs=",
   "Source": "MyBlog",
   "BasePath": "_content/MyBlog",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cv9ks0dds3",
-      "Integrity": "+BrRiGr4bOAAZBgPF6r0JiPWVFphmuiAEy/YDOtrifc=",
+      "Fingerprint": "91rlgu0nph",
+      "Integrity": "HYQNGvuV8N8XsD5YIEQaOYPKK1oUrFZi6BchVNC1a+U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
@@ -199,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q3k1l2rzl3",
-      "Integrity": "+vbERq1lY/OFDyVHJvoeo2JA3pgVO3WcCcmVd2y3c+I=",
+      "Fingerprint": "6jo3sfg3jf",
+      "Integrity": "DmnlCohu6mj9mVksUUbaoshFc2CdL62YBUshAMkxa58=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\MyUI.css"
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "e85ucao4y6",
-      "Integrity": "/um/syHDaw4pBPT99iawSVJCeVGzLurd/eR1DmfZuuk=",
+      "Fingerprint": "wkpxdoo9ar",
+      "Integrity": "wEzEKlFKd818g4RVk6XmJKt7/rDDJVSaW78GlyUyZrw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -269,6 +269,27 @@
       "OriginalItemSpec": "wwwroot\\js\\Index.js"
     },
     {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ManageProduct.js",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "js/ManageProduct#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6eqtt1ozlj",
+      "Integrity": "IrTrqMJemuiNTYz2pv8IvZDHkRCwibeszLrUsV+LH3I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ManageProduct.js"
+    },
+    {
       "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\MyUI.js",
       "SourceId": "MyBlog",
       "SourceType": "Discovered",
@@ -283,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tqvmq7hrwg",
-      "Integrity": "yw8aNtLv75/GHueExgTo5FAlyfk7J8pU3EXBdrOWA78=",
+      "Fingerprint": "at2d3kb4xj",
+      "Integrity": "frL2zgKL5xxFvCqjqch/sucMoBPRGX/IsAYhMf9ajx0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\MyUI.js"
@@ -332,6 +353,69 @@
       "OriginalItemSpec": "wwwroot\\js\\package.json"
     },
     {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\Shop.js",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "js/Shop#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ipf55m7hv1",
+      "Integrity": "xssc4lz4YaE3PKaG4xPX2T9agk7ABWqVLEPBLYnoTe4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Shop.js"
+    },
+    {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopCart.js",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "js/ShopCart#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ed0uhyg00b",
+      "Integrity": "nimAyr9I1svdrFLZwFDAScaCSBusQbVn8wLj+5r4hZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ShopCart.js"
+    },
+    {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopProduct.js",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "js/ShopProduct#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ncrqjj46em",
+      "Integrity": "CRRkRHe8oSuGi+A4BE/5Kwqv2rLC/4tx/Y0hjDyw5yM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ShopProduct.js"
+    },
+    {
       "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\site.js",
       "SourceId": "MyBlog",
       "SourceType": "Discovered",
@@ -346,11 +430,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zqsemmst2b",
-      "Integrity": "C3dJjBxSslUYPt9BSnSIm/ygnLzc+WhyPkIe1XviOvk=",
+      "Fingerprint": "6my1kycjq7",
+      "Integrity": "gr5KbrT6W8qOajaAx6AB+SeyuoqyBDkSMWbdVh2qLZ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\UserInfo.js",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "js/UserInfo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ys0vziogdg",
+      "Integrity": "0iCxvhyuikVFNiemsNUaazQYazm6Gk9jexGBK9h0jJ0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\UserInfo.js"
     },
     {
       "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -2642,6 +2747,27 @@
       "OriginalItemSpec": "wwwroot\\MyImage\\bg.jpg"
     },
     {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\icon.jpg",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "MyImage/icon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "71uk6409rn",
+      "Integrity": "C2tqkHkfJpdU0FpqCRjaonhMrmH1R0qTsW/Ysjxdc54=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MyImage\\icon.jpg"
+    },
+    {
       "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\Iicon.jpg",
       "SourceId": "MyBlog",
       "SourceType": "Discovered",
@@ -2852,12 +2978,33 @@
       "OriginalItemSpec": "wwwroot\\MySource\\wave.zip"
     },
     {
-      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg",
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\風景畫.jpg",
       "SourceId": "MyBlog",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
       "BasePath": "_content/MyBlog",
-      "RelativePath": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/提袋#[.{fingerprint}]?.jpg",
+      "RelativePath": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/風景畫#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i85izxg1tq",
+      "Integrity": "/q0+z3GVshi8Ue0OlLPVXqb7IUElAHxdhZxonBbxdZU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\風景畫.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\鯨魚提袋.jpg",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/鯨魚提袋#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2870,15 +3017,15 @@
       "Integrity": "rhlIafqjFWnSf7Nyr0Bg7MevkhqzeEuGMm3qbh4vn84=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg"
+      "OriginalItemSpec": "wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\鯨魚提袋.jpg"
     },
     {
-      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\d5713243-156d-43c7-bc98-970df6b039e3\\麵包.png",
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\麵包2.png",
       "SourceId": "MyBlog",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
       "BasePath": "_content/MyBlog",
-      "RelativePath": "UserAsset/d5713243-156d-43c7-bc98-970df6b039e3/麵包#[.{fingerprint}]?.png",
+      "RelativePath": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/麵包2#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2891,10 +3038,76 @@
       "Integrity": "C9JPQnQM9WadgvClYmzFKzGohfzOeQe5R3UPjlScgew=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UserAsset\\d5713243-156d-43c7-bc98-970df6b039e3\\麵包.png"
+      "OriginalItemSpec": "wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\麵包2.png"
+    },
+    {
+      "Identity": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\Icon.jpeg",
+      "SourceId": "MyBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\",
+      "BasePath": "_content/MyBlog",
+      "RelativePath": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/Icon#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "93r3rftsfr",
+      "Integrity": "5RI15WcFCCxk9UGj9oujAYUKbRvNXPgeh3PvgO0p60I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\Icon.jpeg"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/Index.91rlgu0nph.css",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\Index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "389"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HYQNGvuV8N8XsD5YIEQaOYPKK1oUrFZi6BchVNC1a+U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 05:43:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91rlgu0nph"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HYQNGvuV8N8XsD5YIEQaOYPKK1oUrFZi6BchVNC1a+U="
+        }
+      ]
+    },
     {
       "Route": "css/Index.css",
       "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\Index.css",
@@ -2906,7 +3119,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "381"
+          "Value": "389"
         },
         {
           "Name": "Content-Type",
@@ -2914,11 +3127,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+BrRiGr4bOAAZBgPF6r0JiPWVFphmuiAEy/YDOtrifc=\""
+          "Value": "\"HYQNGvuV8N8XsD5YIEQaOYPKK1oUrFZi6BchVNC1a+U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 16 May 2025 01:57:08 GMT"
+          "Value": "Thu, 19 Jun 2025 05:43:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2928,52 +3141,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+BrRiGr4bOAAZBgPF6r0JiPWVFphmuiAEy/YDOtrifc="
-        }
-      ]
-    },
-    {
-      "Route": "css/Index.cv9ks0dds3.css",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\Index.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "381"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+BrRiGr4bOAAZBgPF6r0JiPWVFphmuiAEy/YDOtrifc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 16 May 2025 01:57:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cv9ks0dds3"
-        },
-        {
-          "Name": "label",
-          "Value": "css/Index.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+BrRiGr4bOAAZBgPF6r0JiPWVFphmuiAEy/YDOtrifc="
+          "Value": "sha256-HYQNGvuV8N8XsD5YIEQaOYPKK1oUrFZi6BchVNC1a+U="
         }
       ]
     },
@@ -3388,6 +3556,51 @@
       ]
     },
     {
+      "Route": "css/MyUI.6jo3sfg3jf.css",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\MyUI.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9169"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmnlCohu6mj9mVksUUbaoshFc2CdL62YBUshAMkxa58=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 03:36:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6jo3sfg3jf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/MyUI.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmnlCohu6mj9mVksUUbaoshFc2CdL62YBUshAMkxa58="
+        }
+      ]
+    },
+    {
       "Route": "css/MyUI.css",
       "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\MyUI.css",
       "Selectors": [],
@@ -3398,7 +3611,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2189"
+          "Value": "9169"
         },
         {
           "Name": "Content-Type",
@@ -3406,11 +3619,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+vbERq1lY/OFDyVHJvoeo2JA3pgVO3WcCcmVd2y3c+I=\""
+          "Value": "\"DmnlCohu6mj9mVksUUbaoshFc2CdL62YBUshAMkxa58=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 08:44:44 GMT"
+          "Value": "Wed, 25 Jun 2025 03:36:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3420,52 +3633,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+vbERq1lY/OFDyVHJvoeo2JA3pgVO3WcCcmVd2y3c+I="
-        }
-      ]
-    },
-    {
-      "Route": "css/MyUI.q3k1l2rzl3.css",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\MyUI.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2189"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+vbERq1lY/OFDyVHJvoeo2JA3pgVO3WcCcmVd2y3c+I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 08:44:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q3k1l2rzl3"
-        },
-        {
-          "Name": "label",
-          "Value": "css/MyUI.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+vbERq1lY/OFDyVHJvoeo2JA3pgVO3WcCcmVd2y3c+I="
+          "Value": "sha256-DmnlCohu6mj9mVksUUbaoshFc2CdL62YBUshAMkxa58="
         }
       ]
     },
@@ -3480,7 +3648,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "588"
+          "Value": "620"
         },
         {
           "Name": "Content-Type",
@@ -3488,11 +3656,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/um/syHDaw4pBPT99iawSVJCeVGzLurd/eR1DmfZuuk=\""
+          "Value": "\"wEzEKlFKd818g4RVk6XmJKt7/rDDJVSaW78GlyUyZrw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 28 May 2025 01:46:44 GMT"
+          "Value": "Thu, 19 Jun 2025 05:59:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3502,12 +3670,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/um/syHDaw4pBPT99iawSVJCeVGzLurd/eR1DmfZuuk="
+          "Value": "sha256-wEzEKlFKd818g4RVk6XmJKt7/rDDJVSaW78GlyUyZrw="
         }
       ]
     },
     {
-      "Route": "css/site.e85ucao4y6.css",
+      "Route": "css/site.wkpxdoo9ar.css",
       "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3517,7 +3685,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "588"
+          "Value": "620"
         },
         {
           "Name": "Content-Type",
@@ -3525,11 +3693,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/um/syHDaw4pBPT99iawSVJCeVGzLurd/eR1DmfZuuk=\""
+          "Value": "\"wEzEKlFKd818g4RVk6XmJKt7/rDDJVSaW78GlyUyZrw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 28 May 2025 01:46:44 GMT"
+          "Value": "Thu, 19 Jun 2025 05:59:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3539,7 +3707,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e85ucao4y6"
+          "Value": "wkpxdoo9ar"
         },
         {
           "Name": "label",
@@ -3547,7 +3715,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/um/syHDaw4pBPT99iawSVJCeVGzLurd/eR1DmfZuuk="
+          "Value": "sha256-wEzEKlFKd818g4RVk6XmJKt7/rDDJVSaW78GlyUyZrw="
         }
       ]
     },
@@ -3716,6 +3884,133 @@
       ]
     },
     {
+      "Route": "js/ManageProduct.6eqtt1ozlj.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ManageProduct.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1154"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IrTrqMJemuiNTYz2pv8IvZDHkRCwibeszLrUsV+LH3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 01:38:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6eqtt1ozlj"
+        },
+        {
+          "Name": "label",
+          "Value": "js/ManageProduct.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IrTrqMJemuiNTYz2pv8IvZDHkRCwibeszLrUsV+LH3I="
+        }
+      ]
+    },
+    {
+      "Route": "js/ManageProduct.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ManageProduct.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1154"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IrTrqMJemuiNTYz2pv8IvZDHkRCwibeszLrUsV+LH3I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 01:38:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IrTrqMJemuiNTYz2pv8IvZDHkRCwibeszLrUsV+LH3I="
+        }
+      ]
+    },
+    {
+      "Route": "js/MyUI.at2d3kb4xj.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\MyUI.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40624"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"frL2zgKL5xxFvCqjqch/sucMoBPRGX/IsAYhMf9ajx0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Jun 2025 06:26:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "at2d3kb4xj"
+        },
+        {
+          "Name": "label",
+          "Value": "js/MyUI.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-frL2zgKL5xxFvCqjqch/sucMoBPRGX/IsAYhMf9ajx0="
+        }
+      ]
+    },
+    {
       "Route": "js/MyUI.js",
       "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\MyUI.js",
       "Selectors": [],
@@ -3726,7 +4021,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8996"
+          "Value": "40624"
         },
         {
           "Name": "Content-Type",
@@ -3734,11 +4029,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yw8aNtLv75/GHueExgTo5FAlyfk7J8pU3EXBdrOWA78=\""
+          "Value": "\"frL2zgKL5xxFvCqjqch/sucMoBPRGX/IsAYhMf9ajx0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 03:12:23 GMT"
+          "Value": "Mon, 30 Jun 2025 06:26:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3748,52 +4043,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-yw8aNtLv75/GHueExgTo5FAlyfk7J8pU3EXBdrOWA78="
-        }
-      ]
-    },
-    {
-      "Route": "js/MyUI.tqvmq7hrwg.js",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\MyUI.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8996"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yw8aNtLv75/GHueExgTo5FAlyfk7J8pU3EXBdrOWA78=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 03:12:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tqvmq7hrwg"
-        },
-        {
-          "Name": "label",
-          "Value": "js/MyUI.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yw8aNtLv75/GHueExgTo5FAlyfk7J8pU3EXBdrOWA78="
+          "Value": "sha256-frL2zgKL5xxFvCqjqch/sucMoBPRGX/IsAYhMf9ajx0="
         }
       ]
     },
@@ -3962,6 +4212,297 @@
       ]
     },
     {
+      "Route": "js/Shop.ipf55m7hv1.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\Shop.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1237"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xssc4lz4YaE3PKaG4xPX2T9agk7ABWqVLEPBLYnoTe4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 09:11:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ipf55m7hv1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Shop.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xssc4lz4YaE3PKaG4xPX2T9agk7ABWqVLEPBLYnoTe4="
+        }
+      ]
+    },
+    {
+      "Route": "js/Shop.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\Shop.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1237"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xssc4lz4YaE3PKaG4xPX2T9agk7ABWqVLEPBLYnoTe4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 09:11:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xssc4lz4YaE3PKaG4xPX2T9agk7ABWqVLEPBLYnoTe4="
+        }
+      ]
+    },
+    {
+      "Route": "js/ShopCart.ed0uhyg00b.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopCart.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nimAyr9I1svdrFLZwFDAScaCSBusQbVn8wLj+5r4hZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 09:12:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ed0uhyg00b"
+        },
+        {
+          "Name": "label",
+          "Value": "js/ShopCart.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nimAyr9I1svdrFLZwFDAScaCSBusQbVn8wLj+5r4hZ4="
+        }
+      ]
+    },
+    {
+      "Route": "js/ShopCart.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopCart.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nimAyr9I1svdrFLZwFDAScaCSBusQbVn8wLj+5r4hZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 09:12:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nimAyr9I1svdrFLZwFDAScaCSBusQbVn8wLj+5r4hZ4="
+        }
+      ]
+    },
+    {
+      "Route": "js/ShopProduct.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopProduct.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CRRkRHe8oSuGi+A4BE/5Kwqv2rLC/4tx/Y0hjDyw5yM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 03:45:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CRRkRHe8oSuGi+A4BE/5Kwqv2rLC/4tx/Y0hjDyw5yM="
+        }
+      ]
+    },
+    {
+      "Route": "js/ShopProduct.ncrqjj46em.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\ShopProduct.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CRRkRHe8oSuGi+A4BE/5Kwqv2rLC/4tx/Y0hjDyw5yM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 03:45:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ncrqjj46em"
+        },
+        {
+          "Name": "label",
+          "Value": "js/ShopProduct.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CRRkRHe8oSuGi+A4BE/5Kwqv2rLC/4tx/Y0hjDyw5yM="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.6my1kycjq7.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gr5KbrT6W8qOajaAx6AB+SeyuoqyBDkSMWbdVh2qLZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 04:41:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6my1kycjq7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gr5KbrT6W8qOajaAx6AB+SeyuoqyBDkSMWbdVh2qLZ8="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -3972,7 +4513,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "454"
+          "Value": "782"
         },
         {
           "Name": "Content-Type",
@@ -3980,11 +4521,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"C3dJjBxSslUYPt9BSnSIm/ygnLzc+WhyPkIe1XviOvk=\""
+          "Value": "\"gr5KbrT6W8qOajaAx6AB+SeyuoqyBDkSMWbdVh2qLZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 28 May 2025 02:21:08 GMT"
+          "Value": "Wed, 18 Jun 2025 04:41:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3994,13 +4535,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-C3dJjBxSslUYPt9BSnSIm/ygnLzc+WhyPkIe1XviOvk="
+          "Value": "sha256-gr5KbrT6W8qOajaAx6AB+SeyuoqyBDkSMWbdVh2qLZ8="
         }
       ]
     },
     {
-      "Route": "js/site.zqsemmst2b.js",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\site.js",
+      "Route": "js/UserInfo.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\UserInfo.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4009,7 +4550,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "454"
+          "Value": "241"
         },
         {
           "Name": "Content-Type",
@@ -4017,11 +4558,48 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"C3dJjBxSslUYPt9BSnSIm/ygnLzc+WhyPkIe1XviOvk=\""
+          "Value": "\"0iCxvhyuikVFNiemsNUaazQYazm6Gk9jexGBK9h0jJ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 28 May 2025 02:21:08 GMT"
+          "Value": "Wed, 18 Jun 2025 08:02:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0iCxvhyuikVFNiemsNUaazQYazm6Gk9jexGBK9h0jJ0="
+        }
+      ]
+    },
+    {
+      "Route": "js/UserInfo.ys0vziogdg.js",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\UserInfo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0iCxvhyuikVFNiemsNUaazQYazm6Gk9jexGBK9h0jJ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 08:02:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4031,15 +4609,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "zqsemmst2b"
+          "Value": "ys0vziogdg"
         },
         {
           "Name": "label",
-          "Value": "js/site.js"
+          "Value": "js/UserInfo.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-C3dJjBxSslUYPt9BSnSIm/ygnLzc+WhyPkIe1XviOvk="
+          "Value": "sha256-0iCxvhyuikVFNiemsNUaazQYazm6Gk9jexGBK9h0jJ0="
         }
       ]
     },
@@ -13146,6 +13724,88 @@
       ]
     },
     {
+      "Route": "MyImage/icon.71uk6409rn.jpg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\icon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4284"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2tqkHkfJpdU0FpqCRjaonhMrmH1R0qTsW/Ysjxdc54=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Jun 2025 07:21:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "71uk6409rn"
+        },
+        {
+          "Name": "label",
+          "Value": "MyImage/icon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2tqkHkfJpdU0FpqCRjaonhMrmH1R0qTsW/Ysjxdc54="
+        }
+      ]
+    },
+    {
+      "Route": "MyImage/icon.jpg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\icon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4284"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"C2tqkHkfJpdU0FpqCRjaonhMrmH1R0qTsW/Ysjxdc54=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Jun 2025 07:21:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-C2tqkHkfJpdU0FpqCRjaonhMrmH1R0qTsW/Ysjxdc54="
+        }
+      ]
+    },
+    {
       "Route": "MyImage/Iicon.jpg",
       "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\Iicon.jpg",
       "Selectors": [],
@@ -13966,8 +14626,90 @@
       ]
     },
     {
-      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/提袋.jpg",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg",
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/風景畫.i85izxg1tq.jpg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\風景畫.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "701133"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/q0+z3GVshi8Ue0OlLPVXqb7IUElAHxdhZxonBbxdZU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 03:30:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i85izxg1tq"
+        },
+        {
+          "Name": "label",
+          "Value": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/風景畫.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/q0+z3GVshi8Ue0OlLPVXqb7IUElAHxdhZxonBbxdZU="
+        }
+      ]
+    },
+    {
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/風景畫.jpg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\風景畫.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "701133"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/q0+z3GVshi8Ue0OlLPVXqb7IUElAHxdhZxonBbxdZU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 03:30:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/q0+z3GVshi8Ue0OlLPVXqb7IUElAHxdhZxonBbxdZU="
+        }
+      ]
+    },
+    {
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/鯨魚提袋.jpg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\鯨魚提袋.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13988,7 +14730,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 16 May 2025 02:08:47 GMT"
+          "Value": "Mon, 16 Jun 2025 03:24:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14003,8 +14745,8 @@
       ]
     },
     {
-      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/提袋.y85nc4580v.jpg",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\提袋.jpg",
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/鯨魚提袋.y85nc4580v.jpg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\鯨魚提袋.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14025,7 +14767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 16 May 2025 02:08:47 GMT"
+          "Value": "Mon, 16 Jun 2025 03:24:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14039,7 +14781,7 @@
         },
         {
           "Name": "label",
-          "Value": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/提袋.jpg"
+          "Value": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/鯨魚提袋.jpg"
         },
         {
           "Name": "integrity",
@@ -14048,8 +14790,8 @@
       ]
     },
     {
-      "Route": "UserAsset/d5713243-156d-43c7-bc98-970df6b039e3/麵包.png",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\d5713243-156d-43c7-bc98-970df6b039e3\\麵包.png",
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/麵包2.png",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\麵包2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14070,7 +14812,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 07:43:31 GMT"
+          "Value": "Mon, 16 Jun 2025 03:28:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14085,8 +14827,8 @@
       ]
     },
     {
-      "Route": "UserAsset/d5713243-156d-43c7-bc98-970df6b039e3/麵包.tuqo0w57vf.png",
-      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\d5713243-156d-43c7-bc98-970df6b039e3\\麵包.png",
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/麵包2.tuqo0w57vf.png",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\麵包2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14107,7 +14849,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 07:43:31 GMT"
+          "Value": "Mon, 16 Jun 2025 03:28:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14121,11 +14863,93 @@
         },
         {
           "Name": "label",
-          "Value": "UserAsset/d5713243-156d-43c7-bc98-970df6b039e3/麵包.png"
+          "Value": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/麵包2.png"
         },
         {
           "Name": "integrity",
           "Value": "sha256-C9JPQnQM9WadgvClYmzFKzGohfzOeQe5R3UPjlScgew="
+        }
+      ]
+    },
+    {
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/Icon.93r3rftsfr.jpeg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\Icon.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5RI15WcFCCxk9UGj9oujAYUKbRvNXPgeh3PvgO0p60I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 09:41:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "93r3rftsfr"
+        },
+        {
+          "Name": "label",
+          "Value": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/Icon.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5RI15WcFCCxk9UGj9oujAYUKbRvNXPgeh3PvgO0p60I="
+        }
+      ]
+    },
+    {
+      "Route": "UserAsset/3423436d-2d24-4998-8321-370bec0cd7a7/Icon.jpeg",
+      "AssetFile": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\UserAsset\\3423436d-2d24-4998-8321-370bec0cd7a7\\Icon.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5RI15WcFCCxk9UGj9oujAYUKbRvNXPgeh3PvgO0p60I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 09:41:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5RI15WcFCCxk9UGj9oujAYUKbRvNXPgeh3PvgO0p60I="
         }
       ]
     }

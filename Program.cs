@@ -11,7 +11,7 @@ builder.Services.AddScoped<IFileService,FileService>();
 builder.Services.AddDbContext<UserDbContext>(
     op=>op.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
-
+builder.Services.AddHostedService<LogClearService>();
 builder.Services.AddIdentity<MyUser,MyRole>(options =>
     {
         options.Password.RequireDigit = true;

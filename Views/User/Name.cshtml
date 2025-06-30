@@ -1,0 +1,7 @@
+@model UserDto;
+<form asp-action="Revise">
+    @Html.AntiForgeryToken()
+    新的使用者名稱
+    <input type="text" asp-for="@Model.DisplayName">
+    <input type="submit" value="更改">
+</form>

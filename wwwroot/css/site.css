@@ -31,7 +31,9 @@ body {
   display: flex;
 }
 
-
+.main{
+  position: relative;
+}
 
 .tb{
     position: relative;

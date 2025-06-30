@@ -1,0 +1,15 @@
+@using MyBlog.Models;
+@model Product;
+@section js{
+    <script src="~/js/ShopProduct.js" asp-append-version="true"></script>
+} 
+@{  
+    Model.FeatureObj=Model.Feature.toObject<Dictionary<string,string[]>>()["data"]; 
+}
+<script>
+    var data =@Html.Raw(Model.toJson())
+    //console.log(data)
+</script>
+<div id="ProductPage">
+
+</div>

@@ -24,6 +24,7 @@ public class LogController : Controller
        _roleManager=roleManager;
        _signInManager=signInManager;
     }
+    
     [HttpPost]
     [RequireAntiforgeryToken]
     public async Task<IActionResult> LogIn(LogForm info){

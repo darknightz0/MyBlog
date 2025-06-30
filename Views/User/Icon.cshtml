@@ -1,0 +1,7 @@
+@model UserDto;
+<form asp-action="Revise" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    設定頭像
+    <input type="file" asp-for="@Model.Icon" accept="image/*" >
+    <input type="submit" value="更改">
+</form>

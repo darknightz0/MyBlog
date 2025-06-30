@@ -31,9 +31,13 @@ public static class PathExtension{
     public static string Combine(this string empty,string path1,string path2,string path3,string path4,string path5){
         return Path.Combine(path1,path2,path3,path4,path5).Replace("\\", "/");
     }
-    public static string GetUserWwwPath(this string empty,IdentityUser user)
+    public static string GetUserFullPath(this string empty,IdentityUser user)
     {
         return "".Combine("".GetCurrentDirectory(),"wwwroot","UserAsset",user.Id);
+    }
+    public static string GetUserPath(this string empty,IdentityUser user)
+    {
+        return "".Combine("/UserAsset",user.Id);
     }
     
     public static string? GetExtension(this string path)

@@ -1,0 +1,28 @@
+@model UserDto;
+<script>
+    function addG(){
+        var inp=document.getElementById("inp");
+        var se=document.getElementById("se");
+        var op=document.createElement("option");
+        op.textContent=inp.value;
+        op.value=inp.value;
+        inp.value="";
+        se.appendChild(op);
+    }
+</script>
+<form asp-action="Revise">
+    @Html.AntiForgeryToken()
+    設定性別
+    <select asp-for="@Model.Gender" id="se">
+        <option value="男">男</option>
+        <option value="女">女</option>
+        <option value="未知">未知</option>
+    </select>
+    <input type="submit" value="更改">
+</form>
+<div>
+    自訂性別
+    <input type="text" id="inp">
+    <input type="button" value="新增" onclick="addG()">
+</div>
+

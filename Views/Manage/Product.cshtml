@@ -4,19 +4,26 @@
 @model Product;
 @inject UserManager<MyUser> UserManager;
 @inject UserDbContext DB;
+@section js{
+    <script src="~/js/ManageProduct.js" asp-append-version="true"></script>
+}
 @section css{
 <link rel="stylesheet" href="~/css/Manage.css"></link>
 }
-<form asp-action="ProductCreate" enctype="multipart/form-data">
+<form asp-action="ProductCreate" enctype="multipart/form-data" id="fm">
     <input type="text" asp-for="@Model.name">
     <input type="number" asp-for="@Model.number">
     <input type="number" asp-for="@Model.price">
     <input type="file" asp-for="@Model.formFile">
-    <input type="submit">
+    <button type="button" id="sub">送出</button>
     @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="@Model.Feature" id="FeatureInput">
     <input type="hidden" asp-for="@Model.UserId">
     <input type="hidden" asp-for="@Model.Id">
 </form>
+<div id="FeatureContain">
+
+</div>
 <table class="tb">
     <tr>
         @foreach(var e in FormColumeName.Product.Content()){

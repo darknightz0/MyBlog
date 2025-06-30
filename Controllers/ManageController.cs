@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using MyBlog.DBModels;
 using MyBlog.Models;
 using MyBlog.Services;
+using MyBlog.StaticData;
 
 namespace MyBlog.Controllers;
 
@@ -51,7 +52,7 @@ public class ManageController : Controller
         var nuser =await _userManager.FindByIdAsync(userId);
         await user.AddLogAsync(LogTitle.DUser,nuser);
         await _userManager.DeleteAsync(nuser!);
-        Directory.Delete("".GetUserWwwPath(nuser),true);
+        Directory.Delete("".GetUserFullPath(nuser),true);
         return RedirectToAction("Users"); 
     }
     [Authorize(Roles ="Admin")]
@@ -80,7 +81,7 @@ public class ManageController : Controller
                 default:
                 break;
             }
-            Directory.CreateDirectory("".GetUserWwwPath(nuser));
+            Directory.CreateDirectory("".GetUserFullPath(nuser));
         }
         else
         Console.WriteLine("重複新增"+info.Name);
@@ -117,10 +118,11 @@ public class ManageController : Controller
                 
             Console.WriteLine("有效的檔案格式");
             
-            await _fileService.Upload(product.formFile,"".Combine("".GetUserWwwPath(user),product.name+type));
+            await _fileService.Upload(product.formFile,"".Combine("".GetUserFullPath(user),product.name+type));
             await user.AddLogAsync(LogTitle.CProdut,product);
             await _userDbContext.Product.AddAsync(product);
             await _userDbContext.SaveChangesAsync();
+            StaticProductInfo.DisplayPage++;
             }
             else
                 Console.WriteLine("無效驗證");
@@ -141,6 +143,7 @@ public class ManageController : Controller
         _fileService.DeletUserData(p.path.Abs2Rel());
         _userDbContext.Product.Remove(p);
         await _userDbContext.SaveChangesAsync();
+        StaticProductInfo.DisplayPage--;
         return RedirectToAction("Product"); 
     }
     [Authorize(Roles ="Admin")]

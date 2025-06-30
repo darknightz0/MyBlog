@@ -81,14 +81,14 @@
 /*end ShineBox*/
 /*start MoveBackground*/
 .MoveBackground.bg{
-    position: absolute;
+    position: fixed;
     width: 100.1%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .MoveBackground.contain{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
@@ -97,6 +97,302 @@
     overflow: hidden;
 }
 /*end MoveBackground*/
+/*start TextColor*/
+.TextColor.contain{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-size: 25px;
+  padding: 1px;
+  font-weight: bold;
+}
+.TextColor.edge{
+  position: absolute;
+  color: transparent;
+  -webkit-background-clip: text; 
+  -webkit-text-stroke: 0.1em transparent;
+  background-clip: text;
+  user-select: none;
+ 
+}
+.TextColor.main{
+  position: relative;
+  background-color: rgb(155, 155, 155);
+  color: transparent;
+  
+  -webkit-background-clip: text; /* 背景裁剪到文字 */
+  background-clip: text;
+}
+.TextColor.hover,
+.TextColor.selected {
+  color: rgb(255, 215, 0);
+}
+  
+
+/*end TextColor*/
+/*Start StarRating*/
+.StarRating.contain{
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+}
+/*end StarRating*/
+/*Start PriceLabel*/
+.PriceLabel.contain{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+.PriceLabel.unit{
+  font-size: smaller;
+}
+.PriceLabel.price{
+  font-size:30px;
+}
+.PriceLabel.priceOriginContain{
+  color: rgb(155, 155, 155);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height:fit-content ;
+  margin-top: 1em;
+}
+.PriceLabel.priceOrigin{
+  text-decoration:line-through;
+}
+/*end PriceLabel*/
+/*Start ItemBlock*/
+.ItemBlock.contain.type1{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height:fit-content ;
+  border: 1px solid rgb(88, 88, 88);
+}
+.ItemBlock.image.type1{
+  cursor: pointer;
+  width: 25%;
+  height:auto ;
+  max-height: 250px;
+}
+.ItemBlock.title.type1{
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 700;
+}
+.ItemBlock.title.type1:hover{
+  color: orange;
+}
+.ItemBlock.box.type1{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 75%;
+  height:100% ;
+}
+
+.ItemBlock.car.type1{
+  cursor: pointer;
+  border-radius:15px;
+  padding: 5px;
+  background-color: goldenrod;
+}
+.ItemBlock.car.type1:hover{
+  background-color: rgb(173, 132, 26);
+}
+/*end ItemBlock*/
+/*start PageButton*/
+.PageButton.button.selected{
+  background-color: darkgray;
+}
+.PageButton.button{
+  width: 50px;
+  height: auto;
+}
+
+.TextColor.contain.PageButton.contain{
+  border: 1px solid rgb(84, 84, 84);
+}
+.TextColor.contain.PageButton.button:hover{
+  background-color:  rgb(210, 147, 53);
+}
+.PageButton.contain{
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+/*end PageButton*/
+/*start ListMessage*/
+.ListMessage.contain{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(93, 93, 93);
+}
+.ListMessage.txt{
+  width: 90%;
+  word-break: break-all;
+}
+.ListMessage.icon{
+  background-color: black;
+  font-size: 40px;
+  width: 10%;
+  border-radius: 25px;
+  text-align: center;
+}
+.ListMessage.icon:hover{
+  background-color: rgb(83, 83, 83);
+  cursor: pointer;
+}
+/*end ListMessage*/
+
+.OptDiv.contain{
+  border: 1px solid rgb(78, 78, 78);
+  border-radius: 10px;
+}
+.OptDiv.contain.selected{
+  border-color: rgb(0, 0, 165);
+}
+
+/*start ProductPage*/
+.ProductPage.contain{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+.ProductPage.image{
+  position: relative;
+  width: 90%;
+  height: auto;
+}
+.ProductPage.title{
+  position: relative;
+  height: auto;
+  word-break: break-all;
+}
+.ProductPage.section1{
+  position: relative;
+  
+  min-width: 450px;
+  width: 40%;
+  height: auto;
+  min-height: fit-content;
+}
+.ProductPage.section2{
+  position: relative;
+  min-width: 250px;
+  width: 30%;
+}
+.ProductPage.section3{
+  position: relative;
+  min-width: 200px;
+  width: 15%;
+}
+.ProductPage.content{
+  height: auto;
+  word-break: break-all;
+}
+/*end ProductPage*/
+/*start InfoDiv*/
+.InfoDiv.contain{
+  position: relative;
+  width: 50%;
+  font-size: 20px;
+  border: 1px solid rgb(69, 69, 69);
+  border-radius: 5px;
+  padding: 2%;
+  padding-right: 0;
+}
+.InfoDiv.title{
+  font-size: larger;
+  font-weight: bolder;
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+.InfoDiv.subtitle{
+  
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.InfoDiv.list{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  padding: 5%;
+}
+.InfoDiv.list:hover{
+  background-color: rgb(71, 71, 71);
+}
+.InfoDiv.listTitle{
+  width: 30%;
+}
+.InfoDiv.listValue{
+  width: 70%;
+}
+.InfoDiv.hr{
+  height: 1px;
+   background-color: rgb(71, 71, 71);
+}
+/*end InfoDiv*/
+/*start UserIcon*/
+.UserIcon.icon,.UserIcon.contain{
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  border: 1px solid rgb(135, 135, 135);
+}
+.UserIcon.icon{
+  cursor: pointer;
+  user-select: none;
+}
+.UserIcon.list{
+  display: none;
+  position:fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 90%;
+  right: 0;
+  top: 10%;
+  background-color: rgb(44, 44, 44);
+  border-radius: 50px;
+  gap: 10%;
+  z-index: 1;
+}
+.UserIcon.list img{
+  border-radius: 999px;
+  width: 75px;
+  height: 75px;
+  border: 1px solid rgb(135, 135, 135);
+  user-select: none;
+}
+.UserIcon.manage{
+  border-radius: 999px;
+  border: 1px solid rgb(135, 135, 135);
+  padding: 2%;
+  cursor: pointer;
+}
+.UserIcon.manage:hover{
+   background-color: rgb(135, 135, 135);
+}
+/*end UserIcon*/
 /*start special*/
 .textEdge{
     color: #2a2a2a;
@@ -104,4 +400,132 @@
      -webkit-background-clip: text;
      background-clip: text;
      -webkit-text-stroke: 0.1em transparent;
+     
  }
+.RightCart.contain{
+  position:fixed;
+  display: none;
+  overflow: scroll;
+  flex-direction: column;
+  right: 0;
+  width: 10%;
+  height:90%;
+  top: 10%;
+  text-align: center;
+  align-items: center;
+ background-color: rgb(78, 78, 78);
+ scrollbar-width: thin;
+ scrollbar-color: rgb(168, 168, 71) rgb(52, 52, 52);
+}
+.RightCart.title{
+  position:fixed;
+  flex-direction: column;
+  align-items: center;
+}
+
+.RightCartSide{
+  width: 90%;
+}
+
+
+.LRListCart.contain{
+display: flex;
+flex-direction: row;
+font-size: larger;
+border: 1px solid white;
+border-radius: 9999px;
+user-select: none;
+text-align: center;
+}
+.LRListCart.txt{
+  width: 50px;
+  margin :auto;
+}
+.LRListCart.btL,.LRListCart.btR{
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 9999px;
+}
+.LRListCart.btL:hover,.LRListCart.btR:hover{
+  background-color: rgb(135, 135, 135);
+}
+
+.RightCartItem.contain{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border:1px solid rgb(135, 135, 135);
+}
+.RightCartItem.contain img{
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/*Cart*/
+.Cart.contain{
+  width: 75%;
+  position: relative;
+  padding: 1%;
+}
+.CartItem.contain .PriceLabel.contain{
+  margin-left: auto;
+  margin-right: 0;
+}
+.Cart.title{
+  font-size:xx-large;
+}
+.Cart.subtitle{
+  text-align: right;
+}
+.CartItem.contain{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid rgb(135, 135, 135);
+}
+.CartItem.content{
+  display: flex;
+  flex-direction: column;
+  width:70%;
+  gap: 2%;
+}
+.CartItem.content .LRListCart.contain{
+  width: 15%;
+}
+.CartItem.image{
+  width:20%;
+  height: 180px;
+}
+/*Cart*/
+.bt{
+  border-radius: 999px;
+  border: 1px solid rgb(135, 135, 135);
+  padding: 8%;
+  width:max-content;
+  cursor: pointer;
+}
+.bt:hover{
+   background-color: rgb(135, 135, 135);
+}
+
+.flexColume{
+  display: flex;
+  flex-direction: column;
+}
+.flexRow{
+  display: flex;
+  flex-direction: row;
+}
+.flexRow.end,.flexColume.end{
+  justify-content: end;
+}
+.hover:hover{
+   background-color: rgb(135, 135, 135);
+}
