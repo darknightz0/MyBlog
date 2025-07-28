@@ -89,5 +89,6 @@ public class ShopController : Controller{
         return Json(new{data=await _db.Cart.Include(e=>e.Product).Where(e=>e.UserId==_user.Id)
         .Select(e=>new{e.ProductId,e.Number,Icon=e.Product.path,Price=e.Product.price,Name=e.Product.name}).ToArrayAsync()});
     }
+     
     
 }

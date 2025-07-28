@@ -29,7 +29,7 @@ public static class DataExtension{
         return JsonSerializer.Deserialize<T>(JsonDB);
     }
    
-   public static DateTime twNow(this DateTime empty){
+   public static DateTime Now(this string emtpy){
     return DateTime.UtcNow.AddHours(8);
    }
 }

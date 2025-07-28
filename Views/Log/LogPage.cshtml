@@ -4,12 +4,14 @@
     <link rel="stylesheet" href="~/css/MyMVC.css">
 }
 <form asp-action="LogIn">
-<label>@LogForm.name[0]
+<label asp-for="@Model.Name"></label>
 <input type="text" asp-for="@Model.Name">
-</label>
-<label>@LogForm.name[1]
+
+<label asp-for="@Model.Password"></label>
 <input type="text" asp-for="@Model.Password">
-</label>
+
 <input type="submit">
 @Html.AntiForgeryToken()
 </form> 
+@Html.ValidationSummary()
+<p><a asp-action="SignUpPage">未註冊? 點我開始註冊</a></p>

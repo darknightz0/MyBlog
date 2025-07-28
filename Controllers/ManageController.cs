@@ -63,9 +63,9 @@ public class ManageController : Controller
             
             var nuser=new MyUser
             {
-                UserName = info.Name,
+                UserName = info.Name.Substring(0,32),
                 DisplayName = "使用者"+DateTime.Now.ToString("-yyyy-MM-dd"),
-                EmailConfirmed = true
+                EmailConfirmed = false
             };
             await _userManager.CreateAsync(nuser,info.Password);
             await user.AddLogAsync(LogTitle.CUser,nuser);

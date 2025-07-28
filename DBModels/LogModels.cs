@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
@@ -18,6 +19,7 @@ public class UserDbContext: IdentityDbContext<MyUser,MyRole, string>
        LogExtension.db=this;
     }
     public DbSet<Product> Product{get;set;}
+    public DbSet<EmailVerification> EmailVerification{get;set;}
     public DbSet<Cart> Cart{get;set;}
     public DbSet<Rating> Rating{get;set;}
     public DbSet<Order> Order{get;set;}
@@ -70,7 +72,7 @@ public sealed class Myinit{
         }
         
          // 建立管理員帳號
-        var adminEmail = "admin@example.com";
+        var adminEmail = "a21641330@gmail.com";
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
         if (adminUser == null)
         {
@@ -95,9 +97,11 @@ if (!result.Succeeded)
             if(!await userManager.IsInRoleAsync(uu,e))
                 await userManager.AddToRoleAsync(uu, e);
         }
-        //
+        /*
         _db.Cart.RemoveRange(await _db.Cart.ToArrayAsync());
         await _db.SaveChangesAsync();
+        */
+        
         StaticProductInfo.Number=_db.Product.Count();
        
     }
@@ -120,17 +124,14 @@ public class MyRole : IdentityRole
 
 }
 public class LogForm{
-    [Required]
+    [DisplayName("使用者名稱 或 電子郵件")]
+    [Required(ErrorMessage ="帳號不可為空")]
     public string Name{get;set;}=string.Empty;
-    [Required]
+    [Required(ErrorMessage ="密碼不可為空")]
     [DataType(DataType.Password)]
+    [DisplayName("密碼")]
     public string Password{get;set;}=string.Empty;
-    [Required]
     [NotMapped]
-    public string Role{get;set;}=string.Empty;
+    public string? Role{get;set;}=string.Empty;
     public List<SelectListItem>?select;
-    [NotMapped]
-    public static readonly string[] name=["帳號","密碼"];
-    [NotMapped]
-    public static readonly string mess ="";
 }

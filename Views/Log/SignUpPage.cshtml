@@ -1,0 +1,25 @@
+@using MyBlog.DBModels;
+@model SignUpDto;
+
+<form asp-action="SignUp">
+<div class="flexColume item center">
+<div>
+<label asp-for="@Model.Name"></label>
+<input asp-for="@Model.Name">
+</div>
+<span asp-validation-for="@Model.Name"></span>
+<div>
+<label asp-for="@Model.Email"></label>
+<input asp-for="@Model.Email">
+</div>
+<span asp-validation-for="@Model.Email"></span>
+<div>
+<label asp-for="@Model.Password"></label>
+<input asp-for="@Model.Password">
+</div>
+<span asp-validation-for="@Model.Password"></span>
+<input type="submit" value="創建帳號">
+</div>
+@Html.AntiForgeryToken()
+
+</form>  

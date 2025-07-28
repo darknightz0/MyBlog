@@ -134,3 +134,8 @@ C:\Users\72022\Desktop\網頁設計\asp\MyBlog\obj\Debug\net8.0\refint\MyBlog.dl
 C:\Users\72022\Desktop\網頁設計\asp\MyBlog\obj\Debug\net8.0\MyBlog.pdb
 C:\Users\72022\Desktop\網頁設計\asp\MyBlog\obj\Debug\net8.0\MyBlog.genruntimeconfig.cache
 C:\Users\72022\Desktop\網頁設計\asp\MyBlog\obj\Debug\net8.0\ref\MyBlog.dll
+C:\Users\72022\Desktop\網頁設計\asp\MyBlog\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\72022\Desktop\網頁設計\asp\MyBlog\bin\Debug\net8.0\MailKit.dll
+C:\Users\72022\Desktop\網頁設計\asp\MyBlog\bin\Debug\net8.0\MimeKit.dll
+C:\Users\72022\Desktop\網頁設計\asp\MyBlog\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\72022\Desktop\網頁設計\asp\MyBlog\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

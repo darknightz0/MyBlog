@@ -1,0 +1,10 @@
+@using MyBlog.DBModels;
+@using MyBlog.Models;
+@model EmailDto;
+<div class="flexColume item center">
+<h2 class="danger">@(ViewData["error"]??"你的email 未驗證")</h2>
+<form asp-controller="Log" asp-action="EmailVerificationPage">
+    <input type="hidden" asp-for="@Model.Id">
+    <input type="submit" value="點我發送驗證碼">
+</form>
+</div>

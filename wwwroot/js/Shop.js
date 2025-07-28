@@ -30,7 +30,7 @@ product.forEach(e=>{
     }});
     a.push(item.contain);
 });
-var bt=new PageButton(DisplayPage,n,Page,true,(n)=>{
+var bt=new PageButton(DisplayPage,n,page,true,(n)=>{
         window.location.href="/Shop/Shop/"+n.toString();
     })
 a.push(bt.contain);

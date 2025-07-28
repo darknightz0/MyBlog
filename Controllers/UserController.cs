@@ -1,6 +1,8 @@
 
 
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -11,26 +13,21 @@ using MyBlog.Services;
 
 namespace MyBlog.Controllers;
 public class UserController : Controller{
+    private readonly SignInManager<MyUser>_signInManager;
     private readonly UserManager<MyUser> _userManager;
     private readonly UserDbContext _db;
     private MyUser? _user;
-    public UserController(UserManager<MyUser> userManager,UserDbContext db){
+    public UserController(UserManager<MyUser> userManager,UserDbContext db,SignInManager<MyUser> signInManager){
         _userManager=userManager;
         _db=db;
+        _signInManager=signInManager;
     }
     public override async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
         _user=await _userManager.GetUserAsync(User);
-       if(_user!=null){
         await next();
-       }
-       else{
-        NotLog();
-       }
     }
-    public IActionResult NotLog(){
-        return RedirectToAction("LogPage","Log");
-    }
+    
     public IActionResult Info(){ 
         return View(_user);
     }
@@ -64,5 +61,18 @@ public class UserController : Controller{
         _db.Users.Update(_user);
         await _db.SaveChangesAsync();
         return RedirectToAction("Info");
+    }
+    [Authorize(Roles ="User")]
+    public async Task<IActionResult> Delete()
+    {
+        if (!(await _userManager.GetRolesAsync(_user)).Contains("Admin"))
+        {
+            await _signInManager.SignOutAsync();
+            await _userManager.DeleteAsync(_user);
+            Directory.Delete("".GetUserFullPath(_user), true);
+            return RedirectToAction("LogPage","Log");
+        }
+        ViewData["welcomeError"]="系統管理員無法被刪除";
+        return View("Log/Start",_user);
     }
 }

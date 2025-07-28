@@ -53,6 +53,16 @@ function gradient(e,dir,...color){
     e.style.backgroundImage=str;
 }
 /**
+ * @param {HTMLElement} e 
+ * @param  {string[]} color rgb()
+ */
+function gradient_conic(e,...color){
+    var str="conic-gradient(";
+    color.forEach(el=>str=str+el+",");
+    str=str.substring(0,str.length-1)+")";
+    e.style.backgroundImage=str;
+}
+/**
  * @param {number} r 0~255
  * @param {number} g 0~255
  * @param {number} b 0~255
@@ -1113,13 +1123,18 @@ class LRListCart{
     
 }
 class Cart{
+    static main=document.createElement("div");
+    static checkout=document.createElement("div");
+    static #checkoutTitle=document.createElement("span");
+    static #total2=new PriceLabel(0);
     static contain=document.createElement("div");
     static item=document.createElement("div");
     static total=new PriceLabel(0);
     static #quantity=document.createElement("div");
+    static #bt=document.createElement("input");
     static #sum=0;
     static init(){
-        
+        this.main.className="Cart main"
         var div=document.createElement("div");
         div.textContent="購物車";
         div.className="Cart title";
@@ -1127,7 +1142,7 @@ class Cart{
         div2.textContent="定價";
         div2.className="Cart subtitle";
 
-        addHtmlChildren(this.contain,div,div2);
+        addHtmlChildren(this.main,div,div2);
         
         this.contain.className="Cart contain";
         Data.cart.forEach(e=>{
@@ -1136,9 +1151,18 @@ class Cart{
         div=document.createElement("div");
         div.className="flexRow end hover";
         addHtmlChildren(div,this.#quantity,this.total.contain);
-        addHtmlChildren(this.contain,div);
+        addHtmlChildren(this.main,div);
         var c =document.getElementsByClassName("main")[0];
-        c.appendChild(this.contain);
+        
+        this.checkout.className="Cart checkout";
+        addHtmlChildren(this.checkout,this.#checkoutTitle,this.#total2.contain,this.#bt);
+        addHtmlChildren(this.contain,this.main,this.checkout);
+        addHtmlChildren(c,this.contain);
+
+        this.#bt.type="button";
+        this.#bt.value="前往結帳";
+        this.#bt.className="bt";
+        this.#bt.onclick=()=>window.location.href="/Transaction/CheckOut";
     }
     
     
@@ -1160,7 +1184,7 @@ class Cart{
             },()=>{
                 window.location.href="/Shop/Product/"+data.productId;
             });
-            this.contain.appendChild(data.CartItem.contain);
+            this.main.appendChild(data.CartItem.contain);
             Data.cart.set(data.productId,data);
         }
         else{
@@ -1181,9 +1205,11 @@ class Cart{
             this.#sum+=e.number*e.price;
         })
         this.total.setPrice(this.#sum);
+        this.#total2.setPrice(this.#sum);
         this.#count=0;
         Data.cart.forEach(e=>this.#count+=e.number);
         this.#quantity.textContent="小計 ("+this.#count.toString()+" 件商品)：";
+        this.#checkoutTitle.textContent=this.#quantity.textContent;
     }
 }
 class CartItem{
@@ -1216,4 +1242,1200 @@ class CartItem{
     price;
     /**@type {LRListCart} */
     list;
+}
+//Email驗證
+class ECode{
+    constructor(digit,submitCallback=()=>{}){
+        this.submitCallback=submitCallback;
+        var div;
+        for(let i=0;i<digit;i++){
+            div=document.createElement("input");
+            div.className="ECode div";
+            div.oninput=this.#change.bind(this);
+            div.onfocus=(()=>{var ind=i;var div2=div;return ()=>{this.#ind=ind;div2.value=""}})();
+
+            this.div.push(div);
+        }
+        this.bt.type="button";
+        this.bt.onclick=this.#submit.bind(this);
+        this.bt.className="ECode submit";
+        this.bt.value="驗證";
+
+        this.contain.className="ECode contain";
+        addHtmlChildArray(this.contain,this.div);
+        addHtmlChildren(this.contain,this.bt);
+       
+    }
+    contain=document.createElement("div");
+    bt=document.createElement("input");
+    /**@type {HTMLInputElement[]} */
+    div=[];
+    #ind=0;
+    /**@type {(code:string)=>} */
+    submitCallback;
+    #submit(){
+        var ep=true;
+        this.div.forEach(e=>{if(ep&&e.value==""){
+            e.focus();ep=false;
+        }});
+        if(ep){
+           var str="";
+            this.div.forEach(e=>str+=e.value);
+            this.submitCallback(str); 
+        }
+    }
+    #comp=false;
+    #reg=/^[0-9]$/;
+    /**
+     * @param {InputEvent} e 
+     */
+    #change(e){
+        
+        if (e.isComposing) {
+            if(this.#comp){
+                if(this.#reg.test(this.div[this.#ind].value)){
+                    this.#ind++;
+                    (this.#ind!=this.div.length)?(this.div[this.#ind].focus()):this.bt.focus();
+                }
+                else{
+                    this.div[this.#ind].value="";
+                }
+            }
+            this.#comp=!this.#comp;
+        return;
+        }
+        if(this.#reg.test(this.div[this.#ind].value)){
+            this.#ind++;
+            (this.#ind!=this.div.length)?(this.div[this.#ind].focus()):this.bt.focus();
+        }
+        else{
+            this.div[this.#ind].value="";
+        }
+    }
+}
+class G1Dto{
+    /**@type {HTMLElement} */
+    contain;
+    /**@type {()=>} */
+    callback;
+}
+class Game_2048_1{
+    /**@type {boolean} */
+    static #animing;
+    /**@type {()=>} */
+    gameOverCallback;
+    /**@type {HTMLDivElement} */
+    static contain;
+    /**@type {HTMLDivElement} */
+    static main;
+    /**@type {HTMLDivElement} */
+    static addBt;
+    /**@type {HTMLImageElement} */
+    static #nextIcon;
+    /**@type {HTMLDivElement} */
+    static #nextIconN;
+    /**@type {number} */
+    static #next;
+    /**@type {HTMLDivElement[]} */
+    static block;
+    /**@type {G1Dto[]} */
+    static #effect;
+    /**@type {G1Dto} */
+    static #effect2;
+    /**@type {[]} */
+    static map;
+    /**@type {boolean[]} */
+    static #update;
+    /**@type {HTMLDivElement} */
+    static button;
+    /**@type {[]} */
+    static item;
+    /**@type {HTMLDivElement} */
+    static score;
+    static #score=0;
+    static #max=6;
+    static #seed=[0,1,2];
+    /**
+     * @param {()=>} gameOverCallback 
+     */
+    static init(gameOverCallback=()=>{}){
+        Music.init();
+        this.#animing=false;
+        this.gameOverCallback=gameOverCallback;
+        this.block=[];
+        this.#effect=[];
+        this.map=[];
+        this.#update=[];
+        this.item=["/MyImage/jw-10.png","/MyImage/jw-11.png","/MyImage/jw-12.png","/MyImage/jw-1.png","/MyImage/jw-2.png","/MyImage/jw-3.png",
+            "/MyImage/jw-4.png","/MyImage/jw-5.png","/MyImage/jw-6.png"
+            ,"/MyImage/jw-7.png","/MyImage/jw-8.png","/MyImage/jw-13.png","/MyImage/jw-14.png"
+            ,"/MyImage/jw-15.png"
+        ];
+        this.score=document.createElement("div");
+        this.score.className="Game_2048_1 score";
+        this.button=document.createElement("div");
+        this.main=document.createElement("div");
+        this.button.className="Game_2048_1 button";
+        this.contain=document.createElement("div");
+        this.contain.className="Game_2048_1 contain";
+        this.addBt=document.createElement("div");
+        this.addBt.className="Game_2048_1 addBt";
+        this.addBt.onclick=this.add.bind(this);
+        this.#nextIcon=document.createElement("img");
+        this.#nextIcon.style.boxSizing="unset"
+        this.#nextIconN=document.createElement("div");
+        this.main.className="Game_2048_1 main";
+        var str=["←","↑","↓","→"];
+        var dr=[3,0,2,1];
+        var c=document.createElement("div");
+            c.className="flexRow";
+        for(let i=0;i<2;i++){
+            var e=document.createElement("div");
+            e.textContent=str[i];
+            e.className="Game_2048_1 bt";
+            e.onclick=()=>{
+                var ind=dr[i];
+                this.change(ind);
+            };
+            c.appendChild(e);
+        }
+        this.button.appendChild(c);
+        c=document.createElement("div");
+        c.className="flexRow";
+        for(let i=2;i<4;i++){
+            var e=document.createElement("div");
+            e.textContent=str[i];
+            e.className="Game_2048_1 bt";
+            e.onclick=()=>{
+                var ind=dr[i];
+                this.change(ind);
+            };
+            c.appendChild(e);
+        }
+        this.button.appendChild(c);
+        var mc=[];
+        for(let i=0;i<4;i++){
+            var c=document.createElement("div");
+            c.className="flexRow";
+            for(let j=0;j<4;j++){
+                var e=document.createElement("div");
+                e.className="Game_2048_1 block";
+                c.appendChild(e);
+                this.block.push(e);
+                this.map.push(null);
+                
+                var im=document.createElement("img");
+                im.src="/MyImage/light.png";
+                im.style.position="absolute";
+                im.style.display="none";
+                im.style.width="100%";
+                im.style.height="100%";
+                e.appendChild(im);
+                var ob=new G1Dto();
+                ob.contain=im;
+                ob.callback=(()=>{
+                    var tar=im;
+                    return ()=>{
+                        gsap.timeline().set(tar,{display:"block",opacity:0,onStart:()=>this.#animing=true})
+                    .to(tar,{opacity:1,duration:0.175,ease:"none"}).to(tar,{opacity:0,display:"none",duration:0.175,ease:"none",onComplete:()=>this.#animing=false});
+                    }
+                })();
+                this.#update.push(false);
+                this.#effect.push(ob);
+
+
+
+            }
+            mc.push(c);
+        }
+        var div=document.createElement("div");
+        div.textContent="配置";
+        div.style.width="50%";
+        addHtmlChildren(this.addBt,div,this.#nextIcon,this.#nextIconN);
+
+        this.#addScore(0);
+        var sp=new StartPage("2048合合合遊戲",()=>{
+            Music.musicPlay("bgm");
+            this.contain.removeChild(sp.contain);
+        },"玩法說明:<br>兩個相同等級的圖案合在一起即可升一級。<br>操作說明:<br>使用方向鍵或點選按鈕。<br>挑戰:<br>！最高有14級<br>！10000分");
+        var set=document.createElement("img");
+        set.src="/MyImage/setting-icon.png";
+        set.style.position="absolute";
+        set.style.top="0";
+        set.style.right="0";
+        set.style.width="5%";
+        set.style.height="5%";   
+
+        set.onclick=()=>sp.settingDiv.click();
+        addHtmlChildArray(this.main,mc)
+        addHtmlChildren(this.contain,this.score,this.main,this.button,this.addBt,sp.contain,sp.p.back,sp.p2.back,set);
+        this.#select();
+        
+        im=document.createElement("img");
+                im.src="/MyImage/light2.png";
+                im.style.position="absolute";
+                im.style.display="none";
+                im.style.width="100%";
+                im.style.height="100%";
+
+                this.#effect2=new G1Dto();
+                this.#effect2.contain=im;
+                this.#effect2.callback=(()=>{
+                    var tar=im;
+                    return ()=>{
+                        gsap.timeline().set(tar,{display:"block",bottom:"150%",left:"-150%"})
+                    .to(tar,{bottom:"0",left:"0%",duration:0.3,ease:"none"}).set(tar,{display:"none",onComplete:()=>this.#animing=false});
+                    }
+                })();
+    }
+    static #select(){
+        this.#next=this.#seed[rand(0,this.#seed.length)];
+
+        this.#nextIcon.src=this.item[this.#next];
+        this.#nextIconN.textContent=this.#next+1;
+    }
+    //item 裡
+    static add(){
+        if(!this.#animing){
+            var bt=[];
+        for(let i=0;i<this.map.length;i++){
+            if(this.map[i]==null){
+                bt.push(i);
+            }
+        }
+        if(bt.length!=0){
+            Music.effectPlay("ex");
+            this.#animing=true;
+            var ind=bt[rand(0,bt.length)];
+            this.#addset(ind,this.#next);
+            this.#addScore(this.#next+1);
+            this.block[ind].appendChild(this.#effect2.contain);
+            this.#effect2.callback();
+            this.#select();
+        }
+        if(bt.length==1)
+            this.check();
+        }
+        
+    }
+    
+    static #dir=[[0,1,2,3],[3,7,11,15],[12,13,14,15],[0,4,8,12]]
+    static #dd=[4,-1,-4,1];
+    static #merge=false;
+    /**
+     * @param {number} dir 0上 1右 2下 3左
+     */
+    static change(dir){
+        var dx=this.#dd[dir];
+        this.#merge=false;
+        for (let i = 0; i < 3; i++) {
+            this.#dir[dir].forEach(s=>{
+                var indb=s+i*dx;
+                var ind=indb+dx;
+                if(this.map[ind]!=null&&this.map[indb]!=null&&this.map[ind]==this.map[indb]){
+                    if(this.map[ind]+1<this.item.length){
+                        this.#update[ind]=true;
+                        this.#addScore(Math.pow((this.map[ind]+2),2));
+                        this.set(indb,this.map[ind]+1,ind);
+                        this.set(ind);
+                        
+                        this.#merge=true; 
+                        if(this.map[indb]==this.#max){
+                            
+                            this.#seed.push(this.#max-3);
+                            this.#max++;
+                        }
+                        
+                    }
+                }
+            })   
+        }
+        for (let i = 0; i < 3; i++) {
+            this.#dir[dir].forEach(s=>{
+                var indb=s+i*dx;
+                var ind=indb+dx;
+                if(this.map[ind]!=null&&this.map[indb]==null){
+                    this.set(indb,this.map[ind],ind);
+                    this.set(ind);
+                    this.#merge=true;
+                }
+            })   
+        }
+        if(this.#merge){
+            this.change(dir);
+        }
+        else{
+            for(let i=0;i<this.#update.length;i++){
+               if(this.#update[i]){
+                    this.#effect[i].callback();
+                    this.#update[i]=false;
+                } 
+            }   
+        }
+    }
+    /**
+     * 
+     * @param {*} tarInd 
+     * @param {null|number} MapInd =null 時remove 
+     */
+    static set(tarInd,MapInd=null,BFInd=null){
+        this.block[tarInd].replaceChildren();
+        this.map[tarInd]=MapInd;
+        if(MapInd!=null){
+            var img=image(this.item[MapInd]);
+            this.block[tarInd].appendChild(img);
+            var lab=document.createElement("div");
+            lab.textContent=MapInd+1;
+            addHtmlChildren(this.block[tarInd],img,lab,this.#effect[tarInd].contain);
+            if(BFInd!=null){
+                this.#update[tarInd]=this.#update[BFInd];
+                this.#update[BFInd]=false;
+            }
+        }
+    }
+    /**
+     * @param {number} tarInd 
+     * @param {number} MapInd 
+     */
+    static #addset(tarInd,MapInd){
+        this.block[tarInd].replaceChildren();
+        this.map[tarInd]=MapInd;
+        
+            var img=image(this.item[MapInd]);
+            img.style.display="none";
+            this.block[tarInd].appendChild(img);
+            var lab=document.createElement("div");
+            lab.textContent=MapInd+1;
+            addHtmlChildren(this.block[tarInd],img,lab,this.#effect[tarInd].contain);
+        gsap.fromTo(img,{display:"block",left:"-140%",bottom:"120%"},{left:"-20%",bottom:"0",ease:"none",duration:0.3});
+    }
+    static check(){
+        var gameOver=true;
+        var r=4;
+        var c=4;
+        var a=[];
+        for(let i=0;i<r;i++){
+            var as=[];
+            for(let j=0;j<c;j++){
+                as.push(this.map[i*c+j]);
+            }
+            a.push(as)
+        }
+        for(let i=0;i<r;i++){
+            for(let j=0;j<c;j++){
+                if(a[i][j]==this.item.length-1)
+                continue;
+                const n = [];
+
+                if (i > 0) n.push(a[i - 1][j]);     // 上
+                  if (i < 3) n.push(a[i + 1][j]);     // 下
+                  if (j > 0) n.push(a[i][j - 1]);     // 左
+                  if (j < 3) n.push(a[i][j + 1]);
+               
+                for(let v of n){
+                    if(v==a[i][j]){
+                        gameOver=false;  
+                        break;
+                    }  
+                }
+            }
+        }
+        if(gameOver){
+            this.gameOverCallback();
+        }
+    }
+    static #addScore(n){
+        this.#score+=n;
+        this.score.textContent=this.#score;
+    }
+    
+}
+class Music{
+    /**@type {HTMLAudioElement} */
+    static effectPlayer
+    /**@type {HTMLAudioElement} */
+    static effectPlayer2
+    /**@type {HTMLAudioElement} */
+    static musicPlayer
+    /**@type {{}} */
+    static map;
+    static effectPlay2(name){
+        Music.effectPlayer2.pause();
+        Music.effectPlayer2.src=this.map[name];
+        Music.effectPlayer2.play();
+    }
+    static effectPlay(name){
+        Music.effectPlayer.pause();
+        Music.effectPlayer.src=this.map[name];
+        Music.effectPlayer.play();
+    }
+    static musicPlay(name){
+        Music.musicPlayer.pause();
+        Music.musicPlayer.src=this.map[name];
+        Music.musicPlayer.play();
+    }
+    static init(){
+        this.map={
+            "ef-df":"/MyMusic/default.wav",
+            "df":"/MyMusic/bgm.mp3",
+            "ex":"/MyMusic/ex.mp3",
+            "bgm":"/MyMusic/bgm.mp3",
+
+            "hit":"/MyMusic/hit.mp3",
+            "stop":"/MyMusic/stop.mp3",
+            "bgmtree":"/MyMusic/treebgm.mp3",
+            "eff":"/MyMusic/prop.mp3",
+        }
+        this.effectPlayer=document.createElement("audio");
+        this.effectPlayer2=document.createElement("audio");
+        this.musicPlayer=document.createElement("audio");
+        Music.musicPlayer.loop=true;
+
+    }
+}
+class Contain{
+    /**
+     * @param  {...HTMLElement} element 
+     * @returns {HTMLDivElement} 
+     */
+    static divc(...element){
+        var div=document.createElement("div");
+        div.className="contain divc";
+        element.forEach(e=>{
+            div.appendChild(e);
+        }); 
+        return div;
+    }
+    static divr(...element){
+        var div=document.createElement("div");
+        div.className="contain divr";
+        element.forEach(e=>{
+            div.appendChild(e);
+        }); 
+        return div;
+    }
+}
+
+class Page{
+    constructor(){
+        this.back.className="Page back";
+        this.main.className="Page main";
+        this.back.appendChild(this.main);
+        this.main.onclick=(event)=>{
+         event.stopPropagation();
+        }
+        this.back.onclick=()=>{
+           this.back.style.display="none";
+        }
+        
+        
+    }
+    
+    /**@type {HTMLDivElement} 添加UI*/
+    main=document.createElement("div");
+    /**@type {HTMLDivElement} */
+    back=document.createElement("div");
+    //樣式選擇可擴充 不同頁面
+    styleSetting(){
+        /**@type {Array<HTMLInputElement>} */
+        var inp=new Array();
+        var e;
+        var str=["主音量","音樂","音效"];
+        for(let i=0;i<3;i++){
+
+            e=document.createElement("h1");
+            e.textContent=str[i];
+
+            inp.push(document.createElement("input"));
+            inp[i].type="range";
+            inp[i].max="100";
+            inp[i].min="0";
+            inp[i].value=100;
+            inp[i].style.width="100%";
+            this.main.appendChild(Contain.divc(e,inp[i]));
+            this.main.children[i].style.width="30%";
+        }
+        inp[0].oninput=()=>{
+            inp[2].value=inp[1].value=inp[0].value;
+            var v=inp[0].value/100;
+            Music.musicPlayer.volume=v;
+            Music.effectPlayer.volume=v;
+        }
+        inp[1].oninput=()=>{
+            Music.musicPlayer.volume=inp[1].value/100;
+            inp[0].value=(parseInt(inp[1].value)+parseInt(inp[2].value))/2;
+        }
+        inp[2].oninput=()=>{
+            Music.effectPlayer.volume=inp[2].value/100;
+            inp[0].value=(parseInt(inp[1].value)+parseInt(inp[2].value))/2;
+            if(Music.effectPlayer.paused)
+                Music.effectPlay("ef-df");
+        }
+        
+
+        return inp;
+    }
+    styleInfo(str){
+        this.main.innerHTML=str;
+    }
+}
+class StartPage{
+   constructor(title="小遊戲",startCallback=()=>{},info=""){
+    this.p=new Page();
+    this.p.styleSetting();
+    this.contain.className="StartPage contain";
+    this.startDiv.className="btnn";
+    this.settingDiv.className="btnn";
+    this.infoDiv.className="btnn";
+    var e=document.createElement("h1");
+    e.textContent=title;
+    e.className="txtEdge";
+    this.contain.style.backgroundColor="rgba(0,0,0,0.8)";
+    this.contain.appendChild(e);
+    this.startDiv.textContent="開始遊戲";
+    this.startDiv.onclick=startCallback;
+    this.contain.appendChild(this.startDiv);
+    this.settingDiv.textContent="設定";
+    this.contain.appendChild(this.settingDiv);
+    this.settingDiv.onclick=()=>{
+        this.p.back.style.display="flex";
+    }
+    this.contain.appendChild(this.infoDiv);
+    this.infoDiv.textContent="說明";
+    this.p2=new Page();
+    this.p2.styleInfo(info);
+    this.infoDiv.onclick=()=>{
+        this.p2.back.style.display="flex";
+    }
+   }
+   p2;
+   p;
+   /**@type {HTMLDivElement} */
+   contain=document.createElement("div");;
+   /**@type {HTMLDivElement} */
+   startDiv=document.createElement("div");
+   /**@type {HTMLDivElement} */
+   settingDiv=document.createElement("div");
+   /**@type {HTMLDivElement} */
+   infoDiv=document.createElement("div");
+}
+class TimerUi{
+    contain=document.createElement("div");
+    start=new Date();
+    now=new Date();
+    end=new Date();
+    /**@type {number} sec 變化量*/
+    duration=-1;
+     /**@type {number} milisec 更新率*/
+    itvlRe=1000;
+    /**@type {()=>} */
+    endCallback;
+    /**
+     * @param {()=>} endCallback 
+     */
+    constructor(endCallback=()=>{}){
+        this.end.setHours(0,0,0);
+        this.start.setHours(0,0,0);
+        this.contain.textContent="00:00";
+        this.endCallback=endCallback;
+    }
+
+    play(){
+        this.now=new Date(this.start);
+        this.contain.textContent=
+            this.#format(this.now.getMinutes())
+            +":"+this.#format(this.now.getSeconds());
+        if(this.duration>0){
+            timer(()=>{
+            this.now.setSeconds(this.now.getSeconds()+this.duration);
+            this.contain.textContent=
+            this.#format(this.now.getMinutes())
+            +":"+this.#format(this.now.getSeconds());
+            if(this.now<this.end){
+                return true;
+            }
+            return false;
+            },this.itvlRe)
+        }
+        else if(this.duration<0){
+            timer(()=>{
+            this.now.setSeconds(this.now.getSeconds()+this.duration);
+            this.contain.textContent=
+            this.#format(this.now.getMinutes())
+            +":"+this.#format(this.now.getSeconds());
+            if(this.now>this.end){
+                return true;
+            }
+            this.endCallback();
+            return false;
+            },this.itvlRe)
+        }
+    }
+    /**
+     * @param {number} n 
+     */
+    #format(n,d=2){
+        var str="0000000000"+n.toString();
+        return str.substring(str.length-d);
+    }
+}
+class TimerBar{
+    contain=document.createElement("div");
+    #bar=document.createElement("div");
+    /**@type {number} %百分比 readOnly 請用setNow(pc)*/
+    now=100;
+    /**@type {number} %遞減百分比*/
+    dp=4;
+    /**@type {number} milisec 更新率*/
+    itvlRe=33;
+    isPlaying=false;
+    /**@type {()=>} 0%*/
+    firstCallback;
+    /**@type {()=>} 100%*/
+    endCallback;
+    /**
+     * 
+     * @param {object} param0 
+     * @param {()=>} param0.firstCallback 
+     * @param {()=>} param0.endCallback
+     */
+    constructor({firstCallback=()=>{},endCallback=()=>{}}={}){
+        this.firstCallback=firstCallback;
+        this.endCallback=endCallback;
+        this.contain.appendChild(this.#bar);
+        this.contain.className="TimerBar contain"; 
+        this.#bar.className="TimerBar bar";    
+    }
+    /**
+     * @param {number} duration sec
+     */
+    setFromDuration(duration){
+        this.dp=100/(duration/itvlRe*1000);
+    }
+    /**
+     * @param {number} pc 百分比
+     */
+    setNow(pc=null){
+        if(pc!=null)
+            this.now=pc;
+        if(this.now>=100)
+            this.endCallback();
+        gradient(this.#bar,"right",rgb(227, 189, 2,"0%"),rgb(227, 189, 2,this.now.toString()+"%"),rgb(160, 160, 160,this.now.toString()+"%"),rgb(160, 160, 160,"100%"))
+    }
+    play(){
+        if(!this.isPlaying){
+            this.contain.style.display="block";
+            timer(()=>{
+            if(this.now>0){
+                this.now-=this.dp;
+                this.setNow();
+                this.isPlaying=true;
+                if(this.now<0)
+                    this.now=0;
+                return true;
+            }
+            this.contain.style.display="none";
+            this.firstCallback();
+            this.isPlaying=false;
+            return false;
+            },this.itvlRe)
+        }
+        
+    }
+}
+class TimerPie{
+    contain=document.createElement("div");
+    cover=document.createElement("div");
+    icon=document.createElement("img");
+    /**@type {()=>} */
+    endCallback;
+    constructor(){
+        this.contain.className="TimerPie contain";
+        this.cover.className="TimerPie cover";
+        this.icon.className="TimerPie icon";
+        this.icon.src= "/MyImage/shield2.png";
+        addHtmlChildren(this.contain,this.icon,this.cover);
+
+    }
+    setDeg(deg){
+    }
+    /**
+     * @param {number} p 0~100
+     */
+    setPercentage(p){
+         console.log(p)
+        var deg=(360/100*p).toString();
+        gradient_conic(this.cover,rgba(0, 0, 0, 0.5,"0deg"),rgba(0, 0, 0, 0.5,deg+"deg"),rgba(0, 0, 0, 0,deg+"deg"),rgba(0, 0, 0, 0,"360deg"));
+        if(p==360){
+            this.endCallback();
+        }
+    }
+}
+class Game_tree{
+    /**@type {HTMLDivElement} */
+    static contain;
+    /**@type {TimerUi} */
+    static timer;
+
+    /**@type {string} */
+    static path;
+    /**@type {string} */
+    static branch;
+    /**@type {string[]} */
+    static icon;
+
+    /**@type {TimerPie} */
+    static #effIcon;
+    /**@type {HTMLDivElement[]} */
+    static #tree;
+    /**@type {Array<(dir:number)=>void>} */
+    static #cutCallback;
+    /**@type {number} */
+    static #total;
+    /**@type {number} */
+    static maxCombo;
+    /**@type {number} */
+    static #combo;
+    /**@type {HTMLDivElement} */
+    static #comboDiv;
+    /**@type {TimerBar} */
+    static #combobar;
+    /**@type {number} */
+    static #score;
+    /**@type {HTMLDivElement} */
+    static #scoreDiv;
+    /**@type {boolean} */
+    static #isDizzy;
+    /**@type {HTMLImageElement} */
+    static star;
+    /**@type {HTMLDivElement} */
+    static char;
+    /**@type {HTMLImageElement} */
+    static #charImg;
+
+    static init(){
+        Music.init();
+        this.#isDizzy=false;
+        this.maxCombo=0;
+        this.#combo=0;
+        this.#total=0;
+        this.#score=0;
+        this.#pas=3;
+        this.#times=1;
+        this.#effect=()=>{};
+        this.#effectN=0;
+        this.#effIcon=new TimerPie();
+        this.#immunity=false;
+        this.#dizzCallback=()=>{};
+        this.#effectMap=[];
+        this.#tree=[];
+        this.#cutCallback=[];
+        this.timer=new TimerUi(()=>{
+            var p=new Page();
+            this.#score=Math.floor(this.#score*(1+this.maxCombo/400));
+            p.styleInfo(`結算:<br>總分:${this.#score}<br>連續Combo數:${Math.floor(this.maxCombo)}
+                <br>砍下木頭:${Math.floor(this.#total)}個`);
+            this.contain.appendChild(p.back);
+            p.back.style.display="flex";
+        });
+        this.#combobar=new TimerBar({firstCallback:()=>{this.#combo=0;this.#effectN=0;}})
+        this.#comboDiv=document.createElement("div");
+        this.#comboDiv.className="Game_tree combo textEdge";
+        this.#combobar.contain.appendChild(this.#comboDiv);
+        
+        this.path="/MyImage/trunk.png";
+        this.branch="/MyImage/branch.png";
+        this.icon=["/MyImage/fire15.png","/MyImage/fire20.png","/MyImage/fire25.png"
+            ,"/MyImage/shield2.png","/MyImage/shield3.png"];
+        
+        this.#scoreDiv=document.createElement("div");
+        this.#scoreDiv.className="Game_tree score textEdge";
+
+        this.char=document.createElement("div");
+        this.char.className="Game_tree charSpace";
+        this.#charImg=document.createElement("img");
+        this.#charImg.src="/MyImage/axes.png";
+        this.#charImg.className="Game_tree char";
+        var spac=document.createElement("div");
+        spac.className="Game_tree starSpace";
+        this.star=document.createElement("img");
+        this.star.src="/MyImage/starc.png";
+        this.star.className="Game_tree star";
+        spac.appendChild(this.star);
+        addHtmlChildren(this.char,this.#charImg,spac);
+        
+        this.contain=document.createElement("div");
+        this.contain.className="Game_tree main contain";
+        this.timer.contain.className="Game_tree timer textEdge";
+        
+        var str=`玩法說明:<br>在時間內砍下木材即可得分，如果碰到樹葉會被擊暈，請小心！<br>操作說明:<br>使用方向鍵或點選按鈕。<br>挑戰:<br>在時間內盡可能達到高分。<br>！Combo<br>！不要被擊暈<br>！多吃道具
+         <br>道具說明:<br>分數&Combo X1.5倍(8次) 、 分數&Combo X2.0倍(8次) 、 分數&Combo X2.5倍(8次) 、 免除下次暈眩 、 無敵(8次)<br><div class="Game_tree desp"> `;
+        var icon=document.createElement("img");
+        this.icon.forEach(e=>{
+            icon.src=e;
+            str+=icon.outerHTML;
+        })
+        
+        str+="</div>";
+         var sp=new StartPage("海島伐木遊戲",()=>{
+            Music.musicPlay("bgmtree");
+            this.contain.removeChild(sp.contain);
+            this.timer.play();
+        },str);
+        var set=document.createElement("img");
+        set.src="/MyImage/setting.png";
+        set.style.position="absolute";
+        set.style.top="0";
+        set.style.right="0";
+        set.style.width="5%";
+        set.style.height="5%";
+
+        set.onclick=()=>sp.settingDiv.click();
+
+        var btl=document.createElement("div");
+        btl.textContent="←";
+        btl.className="Game_tree dir l textEdge";
+        btl.onclick=()=>{
+            this.cut(-1)
+        };
+        var btr=document.createElement("div");
+        btr.textContent="→";
+        btr.className="Game_tree dir r textEdge";
+        btr.onclick=()=>{
+            this.cut(1)
+        };
+
+        this.#effIcon.contain.className=this.#effIcon.contain.className+" Game_tree effIcon";
+
+        addHtmlChildren(this.contain,this.timer.contain,sp.contain,sp.p.back,sp.p2.back,set,btl,btr,this.char,this.#combobar.contain,this.#scoreDiv,this.#effIcon.contain);
+        this.timer.start.setMinutes(1);
+         Music.effectPlayer.muted=true;
+        for(let i=0;i<8;i++){
+            this.#cutCallback.push(()=>{});
+            this.#effectMap.push(null);
+            this.#tree.push(document.createElement("div"));
+        }
+        for(let i=0;i<8;i++){      
+            this.#add(rand(1,3)==1?1:-1);
+        } 
+        setTimeout(()=>Music.effectPlayer.muted=false,500);
+    }
+    //道具
+    static #times;
+    /**@type {()=>} */
+    static #effect;
+
+    static #effectN;
+    /**@type {boolean} */
+    static #immunity;
+    /**@type {(dir:number)=>} */
+    static #dizzCallback;
+    /**@type {Array<number | null>} */
+    static #effectMap;
+    //生成
+    static #pas;
+    static #lasDir;
+    /**
+     * @returns {boolean}
+     */
+    static #generate(){
+        if(this.#pas>0){
+            this.#pas--;
+            return false;
+        }
+        var bt;
+        if(this.#total<100){
+            bt=4;
+        }
+        else if(this.#total<200){
+            bt=5;
+        }
+        else if(this.#total<300){
+            bt=7;
+        }
+        else{
+            bt=8;
+        }
+
+        if(rand(1,11)<bt){
+            this.#pas=1;
+            return true;
+        }
+        return false;
+    }
+    /**
+     * @param {number|null} dir -1 1 null 
+     * @param {number|null} effect 
+     */
+    static #add(dir = null, effect = null) {
+        var e = document.createElement("div");
+        e.className = "Game_tree trunk contain";
+        e.style.top = "-26%";
+        var left = document.createElement("div");
+        left.className = "Game_tree trunk l";
+        var center = document.createElement("img");
+        center.className = "Game_tree trunk c";
+        center.src = this.path;
+        var right = document.createElement("div");
+        right.className = "Game_tree trunk r";
+        this.#effectMap.pop();
+        if (dir != null&&this.#total >= 300) {
+                dir = -this.#lasDir;
+        }
+        if (effect != null) {
+            if (dir == null) {
+                effect = effect * (rand(1, 3) == 1 ? 1 : -1);
+            }
+            else
+                effect = effect * -dir;
+        }
+        if (dir == null || !this.#generate()) {
+            this.#cutCallback.unshift((dir) => this.#addScore(dir));
+        }
+        else {
+            var tt = document.createElement("img");
+            tt.src = this.branch;
+            
+            if (dir == 1) {
+                tt.className = "Game_tree branchR";
+                right.appendChild(tt);
+                this.#cutCallback.unshift((dir) => {
+                    if (dir == 1)
+                        this.#dizzy(dir);
+                    else
+                        this.#addScore(dir);
+                });
+                this.#lasDir = 1;
+            }
+            else if (dir == -1) {
+                tt.className = "Game_tree branchL";
+                left.appendChild(tt);
+                this.#cutCallback.unshift((dir) => {
+                    if (dir == -1)
+                        this.#dizzy(dir);
+                    else
+                        this.#addScore(dir);
+                });
+                this.#lasDir = -1;
+            }
+        }
+        this.#effectMap.unshift(effect);
+        Music.effectPlay("hit");
+        if(effect!=null){
+            var icon=document.createElement("img");
+            icon.className="Game_tree icon";
+            var dp=effect<0;
+            effect=Math.abs(effect);
+            icon.src=this.icon[effect-1];
+
+            if(dp){
+                
+                left.appendChild(icon);  
+            }
+            else
+                right.appendChild(icon);  
+        }
+
+        addHtmlChildren(e, left, center, right);
+        this.#tree.unshift(e);
+        this.contain.appendChild(e);
+        this.#cutCallback.pop();
+        this.#tree.forEach(e => e.style.top = (parseInt(e.style.top) + 13).toString() + "%")
+        this.#tree.pop();
+        
+    }
+    static #dizzy(dir){
+        
+        if (!this.#immunity) {
+            this.#isDizzy = true;
+            this.#combobar.setNow(0);
+            Music.effectPlay("stop");
+            gsap.fromTo(this.star, { rotationZ: 0, display: "block" }, {
+                rotationZ: 300, display: "none",
+                duration: 0.8,
+                ease: "linear"
+            });
+            setTimeout(() => {
+                this.#isDizzy = false;
+            }, 800);
+        } 
+        else{
+            this.#dizzCallback(dir);
+        }
+    }
+    static cut(dir){
+        if(!this.#isDizzy){
+            this.#cutCallback.at(-1)(dir);
+            if(dir==-1){
+                gsap.timeline()
+                .set(this.char,{left:"30%",bottom:"0",})
+                .set(this.#charImg,{rotateY:180})
+                .fromTo(this.char,{display:"block"},{display:"none",duration:0.2,ease:"none"});
+            }
+            else if(dir==1){
+                gsap.timeline()
+                .set(this.char,{left:"60%",bottom:"0",})
+                .set(this.#charImg,{rotateY:0})
+                .fromTo(this.char,{display:"block"},{display:"none",duration:0.2,ease:"none"});
+            }
+            this.#comboDiv.textContent="Combo "+Math.floor(this.#combo).toString();
+            var str=Math.floor(this.#score).toString();
+            var str2=str[0];
+            str=str.split("").reverse();
+            for (let i = 1; i < str.length; i++) {
+                if(i%3==0)
+                    str2+=",";
+                str2+=str[i];
+            }
+            this.#scoreDiv.textContent=str2.split("").reverse().join("");
+        }
+            
+    }
+    
+    static #addScore(dir){
+        this.#effectN++;
+        this.#total+=this.#times;
+        this.#combo+=this.#times;
+        
+        this.#combobar.setNow(100);
+        this.#combobar.play();
+        if(this.#combo>this.maxCombo)
+            this.maxCombo=this.#combo;
+        this.#score+=rand(1500,2000)*this.#times;
+
+        
+
+        var tar=this.#tree.at(-1);
+        var dy=rand(-50,0).toString();
+        var dt=0.4;
+        if(dir<0){
+            gsap.timeline().to(tar,{top:dy+"%",left:"100%",rotateZ:"-50deg",ease:"none",duration:dt},0)
+            .call(()=>this.contain.removeChild(tar),[],dt)
+            ;
+        }
+        else if(dir>0){
+            gsap.timeline().to(tar,{top:dy+"%",left:"-20%",rotateZ:"50deg",ease:"none",duration:dt},0)
+            .call(()=>this.contain.removeChild(tar),[],dt)
+            ;
+        }
+        this.#effect();
+        var ef=this.#effectMap.at(-1);
+        
+        if(ef!=null&&dir*ef>0){
+            ef=Math.abs(ef);
+            this.#effIcon.icon.src=this.icon[ef-1];
+            this.#effIcon.setPercentage(0);
+            this.#effIcon.contain.style.display="flex";
+            Music.effectPlay2("eff");
+            if(ef==1){
+                this.#times=1.5;
+                this.#effect=(()=>{
+                    var n=8;
+                    return()=>{
+                        if(n==0){
+                            this.#effect=()=>{};
+                            this.#times=1;
+                            this.#effIcon.contain.style.display="none";
+                        }
+                        n--;
+                        this.#effIcon.setPercentage(100/8*(8-n));
+                    };
+                })();
+            }
+            else if(ef==2){
+                this.#times=2;
+                this.#effect=(()=>{
+                    var n=8;
+                    return()=>{
+                        if(n==1){
+                            this.#effect=()=>{};
+                            this.#times=1;
+                            this.#effIcon.contain.style.display="none";
+                        }
+                        n--;
+                        this.#effIcon.setPercentage(100/8*(8-n));
+                    };
+                })();
+            }
+            else if(ef==3){
+                this.#times=2.5;
+                this.#effect=(()=>{
+                    var n=8;
+                    return()=>{
+                        if(n==1){
+                            this.#effect=()=>{};
+                            this.#times=1;
+                            this.#effIcon.contain.style.display="none";
+                        }
+                        n--;
+                        this.#effIcon.setPercentage(100/8*(8-n));
+                    };
+                })();
+            }
+            else if(ef==4){
+                this.#immunity=true;
+                this.#dizzCallback=()=>{
+                    this.#immunity=false;
+                    this.#dizzCallback=()=>{};
+                    this.#effIcon.contain.style.display="none";
+                };
+            }
+            else if(ef==5){
+                this.#immunity=true;
+                this.#effect=(()=>{
+                    var n=8;
+                    return()=>{
+                        if(n==1){
+                            this.#effect=()=>{};
+                            this.#immunity=false;
+                            this.#dizzCallback=()=>{};
+                            this.#effIcon.contain.style.display="none";
+                        }
+                        n--;
+                        this.#effIcon.setPercentage(100/8*(8-n));  
+                    };
+                })();
+                this.#dizzCallback=(dir)=>{
+                    this.#addScore(dir);
+                };
+            }
+        }
+        if(this.#effectN==12){
+            this.#effectN=0;
+            this.#add(rand(1,3)==1?1:-1,rand(1,this.icon.length+1));
+        }
+        else
+            this.#add(rand(1,3)==1?1:-1);
+    }
+}
+
+/**
+ * @param {string} src 
+ * @returns {HTMLImageElement}
+ */
+function image(src){
+    var e=document.createElement("img");
+    e.src=src;
+  
+    e.style.width="100%";
+    return e;
+}
+/**
+ * @param {number} start 
+ * @param {number} end 
+ * @returns {number}start<=return<end
+ */
+function rand(start,end){
+    return Math.floor(Math.random()*(end-start)+start);
+}
+/**
+ * @param {()=>boolean} fun
+ * @param {number} itvl 
+ */
+function timer(fun,itvl){
+    setTimeout(() => {
+        if(fun()){
+            timer(fun,itvl);
+        }
+    }, itvl);
 }

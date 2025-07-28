@@ -213,16 +213,132 @@
       "PackagePath": "staticwebassets\\MyImage\\Iicon.jpg"
     },
     {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\axes.png",
+      "PackagePath": "staticwebassets\\MyImage\\axes.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\bch.jpeg",
+      "PackagePath": "staticwebassets\\MyImage\\bch.jpeg"
+    },
+    {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\bg.jpg",
       "PackagePath": "staticwebassets\\MyImage\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\branch.png",
+      "PackagePath": "staticwebassets\\MyImage\\branch.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\fire15.png",
+      "PackagePath": "staticwebassets\\MyImage\\fire15.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\fire20.png",
+      "PackagePath": "staticwebassets\\MyImage\\fire20.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\fire25.png",
+      "PackagePath": "staticwebassets\\MyImage\\fire25.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\gd.jpeg",
+      "PackagePath": "staticwebassets\\MyImage\\gd.jpeg"
     },
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\icon.jpg",
       "PackagePath": "staticwebassets\\MyImage\\icon.jpg"
     },
     {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-1.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-1.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-10.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-10.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-11.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-11.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-12.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-12.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-13.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-13.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-14.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-14.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-15.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-15.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-2.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-2.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-3.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-3.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-4.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-4.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-5.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-5.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-6.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-6.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-7.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-7.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\jw-8.png",
+      "PackagePath": "staticwebassets\\MyImage\\jw-8.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\light.png",
+      "PackagePath": "staticwebassets\\MyImage\\light.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\light2.png",
+      "PackagePath": "staticwebassets\\MyImage\\light2.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\setting-icon.png",
+      "PackagePath": "staticwebassets\\MyImage\\setting-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\setting.png",
+      "PackagePath": "staticwebassets\\MyImage\\setting.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\shield2.png",
+      "PackagePath": "staticwebassets\\MyImage\\shield2.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\shield3.png",
+      "PackagePath": "staticwebassets\\MyImage\\shield3.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\starc.png",
+      "PackagePath": "staticwebassets\\MyImage\\starc.png"
+    },
+    {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\streamline.png",
       "PackagePath": "staticwebassets\\MyImage\\streamline.png"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\trunk.png",
+      "PackagePath": "staticwebassets\\MyImage\\trunk.png"
     },
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\typhoon.JPG",
@@ -235,6 +351,34 @@
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyImage\\wave.JPG",
       "PackagePath": "staticwebassets\\MyImage\\wave.JPG"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\bgm.mp3",
+      "PackagePath": "staticwebassets\\MyMusic\\bgm.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\default.wav",
+      "PackagePath": "staticwebassets\\MyMusic\\default.wav"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\ex.mp3",
+      "PackagePath": "staticwebassets\\MyMusic\\ex.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\hit.mp3",
+      "PackagePath": "staticwebassets\\MyMusic\\hit.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\prop.mp3",
+      "PackagePath": "staticwebassets\\MyMusic\\prop.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\stop.mp3",
+      "PackagePath": "staticwebassets\\MyMusic\\stop.mp3"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MyMusic\\treebgm.mp3",
+      "PackagePath": "staticwebassets\\MyMusic\\treebgm.mp3"
     },
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\MySource\\MyGL.zip",
@@ -307,6 +451,18 @@
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\EmailVerificationPage.js",
+      "PackagePath": "staticwebassets\\js\\EmailVerificationPage.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\GameG1.js",
+      "PackagePath": "staticwebassets\\js\\GameG1.js"
+    },
+    {
+      "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\GameTree.js",
+      "PackagePath": "staticwebassets\\js\\GameTree.js"
     },
     {
       "Id": "C:\\Users\\72022\\Desktop\\網頁設計\\asp\\MyBlog\\wwwroot\\js\\Index.js",

@@ -1,0 +1,13 @@
+@model EmailDto;
+@section js{
+    <script src="~/js/EmailVerificationPage.js" asp-append-version="true"></script>
+}
+<h2 class="danger">@ViewData["error"]</h2>
+
+<form asp-action="EmailCode" id="fm">
+    
+    
+    <input type="hidden" asp-for="@Model.Code" id="code">
+    <input type="hidden" asp-for="@Model.Id">
+    @Html.AntiForgeryToken()
+</form>

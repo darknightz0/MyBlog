@@ -16,7 +16,7 @@
 .DropList{
     max-width: 100px;
     margin: 0 0;
-    z-index: 1;
+    z-index: 9999;
 }
 .DropList.contain{
     position: relative;
@@ -466,10 +466,23 @@ text-align: center;
 }
 
 /*Cart*/
-.Cart.contain{
-  width: 75%;
+.Cart.checkout{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Cart.main{
   position: relative;
+  width: 75%;
+}
+.Cart.contain{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
   padding: 1%;
+  gap:20px ;
 }
 .CartItem.contain .PriceLabel.contain{
   margin-left: auto;
@@ -503,11 +516,409 @@ text-align: center;
   width:20%;
   height: 180px;
 }
-/*Cart*/
+/*Cart end*/
+
+/*ECode start*/
+.ECode.contain{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1%;
+}
+.ECode.div{
+  background-color: transparent;
+  color:inherit;
+  width: 50px;
+  height: 50px;
+  font-size:xx-large;
+  border: 1px solid rebeccapurple;
+  text-align: center;
+  line-height:50px;
+  
+}
+
+.ECode.submit{
+  background-color: transparent;
+  color:inherit;
+  border: 1px solid rgb(94, 94, 94);
+}
+.ECode :hover{
+  background-color: rgb(74, 74, 74);
+}
+/*ECode end*/
+.Game_2048_1.contain{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url("/MyImage/gd.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.Game_2048_1.main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform: rotateX(-60deg) rotateZ(45deg);
+
+}
+.Game_2048_1.main img{
+  padding: 2%;
+  transform:rotateZ(-45deg) rotateX(0deg) ;
+  height:140%;
+}
+.Game_2048_1.block div{
+  padding: 2%;
+  transform:rotateZ(-45deg) rotateX(0deg) ;
+  font-size: 50px;
+  position: absolute;
+  right: 0%;
+  top: 20%;
+  z-index: 1;
+  width: fit-content;
+  background:black;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+}
+.Game_2048_1.block{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background-color: rgba(246, 224, 129, 0.881);
+  border: 5px ridge rgb(220, 68, 3)
+} 
+.Game_2048_1.block img{
+position: absolute;
+right: 20%;
+bottom: 0;
+}
+
+.Game_2048_1.button{
+  position: absolute;
+  bottom: -5%;
+  right:  5%;
+  font-size: 100px;
+  font-weight:9000;
+  background-color: white;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: rotateX(-60deg) rotateZ(45deg);
+}
+.Game_2048_1.score{
+    text-align: center;
+    font-size: 40px;
+}
+.Game_2048_1.addBt{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  font-size: 40px;
+  bottom: 1%;
+  left: 1%;
+  width: 20%;
+  height: 100px;
+  padding: 5%;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 9999px;
+  border: 2px ridge rgb(251, 212, 86);
+  background-image: linear-gradient(to right,rgb(42, 232, 9) 50% ,rgb(19, 111, 3) 50%);
+  user-select: none;
+  margin-right: 60%;
+}
+.Game_2048_1.addBt:hover{
+  background-image:linear-gradient(to right,rgb(31, 169, 7) 50% ,rgb(11, 65, 2) 50%);
+}
+.Game_2048_1.addBt img{
+  width: 40%;
+  height:100%;
+}
+.Game_2048_1.addBt{
+  box-sizing: unset !important;
+}
+.Game_2048_1.bt{
+  text-align: center;
+  line-height: 150px;
+  width: 150px;
+  height: 150px;
+}
+
+.StartPage.contain{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(2, 37, 57);
+    background-size:auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    user-select: none;
+   
+}
+.StartPage.contain .btnn{
+
+    font-size: 30px;
+    width: 30%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(9, 2, 79);
+    border-radius: 15px;
+    border: 5px ridge rgb(1, 110, 172);
+}
+.StartPage.contain .btnn:hover{
+    background: rgb(13, 2, 129);
+}
+
+.Page.back{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.Page.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    background: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: 80%;
+    z-index: 3;
+    border: 5px ridge rgb(2, 0, 6);
+    user-select: none;
+}
+.Page.main.Option div{
+    cursor: pointer;
+}
+.Game_tree.desp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  height: 20%;
+  width: 100%;
+}
+.Game_tree.desp img{
+  width: auto;
+  max-width: 18%;
+  height: 100%;
+}
+.Game_tree.timer{
+  z-index: 99;
+  font-size: 40px;
+}
+.Game_tree.effIcon{
+  display: none;
+  z-index: 99;
+}
+.Game_tree .StartPage.contain,.Game_tree .Page.back{
+  z-index: 100;
+}
+.Game_tree.main.contain{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  background-image: url("/MyImage/bch.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.Game_tree.dir{
+  position: absolute;
+  border-radius: 50%;
+  font-size: 100px;
+  width: 25%;
+  height: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px ridge snow;
+  user-select: none;
+  bottom: 0;
+}
+.Game_tree.dir:hover{
+  background-clip: unset !important;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.Game_tree.dir.l{
+left: 0;
+}
+.Game_tree.dir.r{
+right: 0;
+}
+.Game_tree.starSpace{
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  left: 0%;
+  top: -45%;
+  transform: rotateX(-80deg);
+  z-index: 99;
+}
+.Game_tree.star{
+  display: none;
+  width: 100%;
+  width: 100%;
+}
+.Game_tree.charSpace{
+  display: none;
+  position: absolute;
+  width:fit-content;
+  height: fit-content;
+}
+.Game_tree.char{
+  width:auto;
+  height: 200px;
+}
+body{
+  overflow-x: hidden;
+}
+.Game_tree.trunkbg{
+  width: 15%;
+  height: 25%;
+  position: absolute;
+}
+.Game_tree.trunk.contain{
+  width: 15%;
+  height: 25%;
+  position: absolute;
+
+}
+.Game_tree.trunk.c{
+  width: 100%;
+  height: 100%;
+}
+.Game_tree.trunk.r{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  top: -10%;
+  left: 80%;
+ width: 120%;
+  height: 80%;
+  
+}
+.Game_tree.trunk.l{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  top: -10%;
+  right: 80%;
+  width: 120%;
+  height: 80%;
+}
+.Game_tree.branchR{
+   width: 100%;
+  height: 100%;
+}
+.Game_tree.branchL{
+  width: 100%;
+  height: 100%;
+  rotate: y 180deg;
+}
+.Game_tree.icon{
+  position: absolute;
+   width: 50%;
+  height: 50%;
+  padding: 2%;
+  margin-top: 30%;
+}
+.Game_tree.combo{
+ font-size: 50px;
+}
+.Game_tree.score{
+  position: absolute;
+  left: 1%;
+  top:20%;
+  font-size:40px;
+} 
+
+
+.TimerBar.bar{
+  width: 200px;
+  height: 100px;
+}
+.bar{
+  border-bottom-left-radius: 25% 50%;
+  border-top-left-radius: 25% 50%;
+  border-bottom-right-radius: 25% 50%;
+  border-top-right-radius: 25% 50%;
+}
+.TimerBar.contain{
+  display:"none";
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
+.TimerPie.contain{
+  position: relative;
+  border-radius: 50%;
+  background-color: rgba(206, 173, 5, 0.644);
+  border:2px solid #e4e002;
+}
+.TimerPie.cover{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.TimerPie.icon{
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+
+}
+
+
 .bt{
   border-radius: 999px;
   border: 1px solid rgb(135, 135, 135);
-  padding: 8%;
+  padding: 5%;
   width:max-content;
   cursor: pointer;
 }
@@ -526,6 +937,13 @@ text-align: center;
 .flexRow.end,.flexColume.end{
   justify-content: end;
 }
+.flexRow.item.center,.flexColume.item.center{
+  align-items: center;
+  gap: 5px;
+}
 .hover:hover{
    background-color: rgb(135, 135, 135);
+}
+.danger{
+  color: crimson;
 }

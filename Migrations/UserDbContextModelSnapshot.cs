@@ -261,6 +261,30 @@ namespace MyBlog.Migrations
                     b.ToTable("Cart");
                 });
 
+            modelBuilder.Entity("MyBlog.Models.EmailVerification", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Expire")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("EmailVerification");
+                });
+
             modelBuilder.Entity("MyBlog.Models.MyLog", b =>
                 {
                     b.Property<DateTime>("Time")
@@ -511,6 +535,17 @@ namespace MyBlog.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("MyBlog.Models.EmailVerification", b =>
+                {
+                    b.HasOne("MyBlog.DBModels.MyUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });

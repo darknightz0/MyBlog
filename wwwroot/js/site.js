@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 onload=()=>{
     var child=document.getElementsByClassName("alinks");
-    if(child!=null){
+    if(child.length!=0){
         var dp=new DropList();
         dp.addAnchorOptions(child,["使用者","商品","日誌"],"管理");
     }
@@ -16,6 +16,10 @@ onload=()=>{
         ic.logOut.onclick=()=>bt.click();
         ic.bt.onclick=()=>window.location.href="/User/Info";
     }
-   
+    child=document.getElementsByClassName("glinks");
+    if(child.length!=0){
+        var dp=new DropList();
+        dp.addAnchorOptions(child,["2048合合合","海島伐木"],"小遊戲");
+    }
 }
 new MoveBackground("/MyImage/bg.jpg");
